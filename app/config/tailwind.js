@@ -13,7 +13,8 @@ module.exports = {
                 "ap-green": {
                     100: "#37F286",
                     200: "#23CE6B",
-                    300: "#F1E944F",
+                    300: "#1E944F",
+                    400: "#187A42",
                 },
                 "ap-dark": {
                     100: "#181B1F",
@@ -22,6 +23,8 @@ module.exports = {
                 "ap-white": {
                     100: "#FFFFFF",
                 },
+                'linkedin-blue': '#0077B5',
+
             },
             minWidth: {
                 auto: "auto",
@@ -79,10 +82,23 @@ module.exports = {
             maxWidth: {
                 "1/2": "50%",
             },
-            keyframes: {},
-            animation: {},
+            animation: {
+                "gradient-shine": "gradient-shine 2.5s linear infinite",
+            },
             animationFill: {
                 forwards: "forwards",
+            },
+            keyframes: {
+                "gradient-shine": {
+                    "0%": {
+                        "background-size": "200% 200%",
+                        "background-position": "200% center",
+                    },
+                    "100%": {
+                        "background-size": "200% 200%",
+                        "background-position": "0% center",
+                    },
+                },
             },
         },
     },
