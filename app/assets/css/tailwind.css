@@ -3,5 +3,16 @@
 @tailwind utilities;
 
 html {
-    font-family: Proxima Nova, system-ui, sans-serif;
+    font-family: "General-Sans-Regular", system-ui, sans-serif;
+}
+
+/* Custom Tailwind components */
+@layer components {
+    .center {
+        @apply mx-auto max-w-screen-xl;
+    }
+
+    .content {
+        @apply px-4 md:px-8 lg:px-12 xl:px-16;
+    }
 }
