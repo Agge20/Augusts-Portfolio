@@ -23,6 +23,8 @@ module.exports = {
                 "ap-white": {
                     100: "#FFFFFF",
                 },
+                'linkedin-blue': '#0077B5',
+
             },
             minWidth: {
                 auto: "auto",
@@ -90,11 +92,11 @@ module.exports = {
                 "gradient-shine": {
                     "0%": {
                         "background-size": "200% 200%",
-                        "background-position": "0% center",
+                        "background-position": "200% center",
                     },
                     "100%": {
                         "background-size": "200% 200%",
-                        "background-position": "200% center",
+                        "background-position": "0% center",
                     },
                 },
             },

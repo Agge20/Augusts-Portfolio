@@ -1,10 +1,11 @@
 <template>
-    <header class="content fixed top-0 flex h-32 w-full items-center">
+    <header class="content fixed top-8 flex h-32 w-full items-center">
         <div class="center flex w-full justify-end">
             <!-- Navigation links -->
-            <ul class="flex">
+            <ul class="flex items-center">
                 <navigation-link v-for="link in navigationLinks" :key="link.scrollToId" :link="link" />
             </ul>
+            <socials />
         </div>
     </header>
 </template>
