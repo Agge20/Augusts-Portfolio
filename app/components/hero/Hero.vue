@@ -1,6 +1,6 @@
 <template>
-    <particles id="tsparticles" :particlesInit="particlesInit" :options="particlesTSConfig" />
-    <h1 id="scene-1" class="bg-ap-white-100 opacity-0">Hello</h1>
+    <particles id="tsparticles" :particlesInit="particlesInit" :options="particlesTSConfig" class="animate-fade-in" />
+    <h1 id="scene-1">Hello</h1>
     <h2 id="scene-2">My name is <span>August</span></h2>
     <h3 id="scene-3">I build stuff with:</h3>
 </template>
@@ -14,7 +14,6 @@
     import { animate, timeline } from "motion";
 
     // Import types
-    import { TimelineItem } from "@/types/MotionOneTypes";
     import { TimelineDefinition, TimelineSegment } from "@motionone/dom/types/timeline/types";
 
     const particlesInit = async (engine: any) => {

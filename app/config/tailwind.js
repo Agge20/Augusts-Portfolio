@@ -23,8 +23,7 @@ module.exports = {
                 "ap-white": {
                     100: "#FFFFFF",
                 },
-                'linkedin-blue': '#0077B5',
-
+                "linkedin-blue": "#0077B5",
             },
             minWidth: {
                 auto: "auto",
@@ -84,6 +83,8 @@ module.exports = {
             },
             animation: {
                 "gradient-shine": "gradient-shine 2.5s linear infinite",
+                "expand-in": "expand-in 1.5s ease-in-out",
+                "fade-in": "fade-in 1.5s ease-in-out",
             },
             animationFill: {
                 forwards: "forwards",
@@ -98,6 +99,18 @@ module.exports = {
                         "background-size": "200% 200%",
                         "background-position": "0% center",
                     },
+                },
+                "expand-in": {
+                    "0%": {
+                        transform: "scale(0)",
+                    },
+                    "100%": {
+                        transform: "scale(1)",
+                    },
+                },
+                "fade-in": {
+                    "0%": { opacity: 0 },
+                    "100%": { opacity: 1 },
                 },
             },
         },
