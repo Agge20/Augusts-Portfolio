@@ -1,4 +1,4 @@
-const particlesTSConfig = {
+const particlesTSLightModeConfig = {
     fpsLimit: 144,
     background: {
         color: {
@@ -46,7 +46,7 @@ const particlesTSConfig = {
             type: "circle",
             stroke: {
                 width: 0,
-                color: "#1E944F",
+                color: "#0F0F0F",
             },
             polygon: {
                 nb_sides: 5,
@@ -75,7 +75,7 @@ const particlesTSConfig = {
         line_linked: {
             enable: true,
             distance: 150,
-            color: "#23CE6B",
+            color: "#181B1F",
             opacity: 0.4,
             width: 1,
         },
@@ -115,4 +115,4 @@ const particlesTSConfig = {
     detectRetina: true,
 };
 
-export { particlesTSConfig };
+export { particlesTSLightModeConfig };

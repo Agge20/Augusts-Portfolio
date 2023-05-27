@@ -1,5 +1,5 @@
 <template>
-    <ul class="bg-ap-white-100 animate-fade-in flex gap-3 self-center rounded-full px-4 py-4">
+    <ul class="bg-white-100 animate-fade-in flex gap-3 self-center rounded-full px-4 py-4">
         <li class="rounded-md transition-all hover:scale-105">
             <a :href="socialUrls.linkedin" target="_blank">
                 <icon name="logos:linkedin-icon" size="2.5em" class="rounded-md" />

@@ -2,6 +2,20 @@
 module.exports = {
     content: ["./templates/**/*.{html,js,twig}", "./components/**/*.{html,twig}"],
     theme: {
+        colors: {
+            green: {
+                100: "#37F286",
+                200: "#23CE6B",
+                300: "#1E944F",
+                400: "#187A42",
+            },
+            dark: {
+                100: "#181B1F",
+                200: "#0F0F0F",
+            },
+            white: "#FFFFFF",
+            "linkedin-blue": "#0077B5",
+        },
         extend: {
             fontFamily: {
                 "gs-regular": ["General-Sans-Regular"],
@@ -9,22 +23,7 @@ module.exports = {
                 "gs-semibold": ["General-Sans-Semibold"],
                 "gs-bold": ["General-Sans-Bold"],
             },
-            colors: {
-                "ap-green": {
-                    100: "#37F286",
-                    200: "#23CE6B",
-                    300: "#1E944F",
-                    400: "#187A42",
-                },
-                "ap-dark": {
-                    100: "#181B1F",
-                    200: "#0F0F0F",
-                },
-                "ap-white": {
-                    100: "#FFFFFF",
-                },
-                "linkedin-blue": "#0077B5",
-            },
+
             minWidth: {
                 auto: "auto",
                 px: "1px",
