@@ -1,8 +1,8 @@
 <template>
-    <header class="content fixed top-8 flex h-32 w-full items-center">
+    <header id="header" class="content fixed top-8 flex h-32 w-full">
         <div class="center flex w-full justify-end">
             <!-- Navigation links -->
-            <ul class="flex items-center">
+            <ul id="navbar" class="flex items-center">
                 <navigation-link v-for="link in navigationLinks" :key="link.scrollToId" :link="link" />
             </ul>
             <socials />
@@ -16,6 +16,12 @@
 
     // Import the allowed navigation types
     import { NavigationLinks, NavigationText } from "@/types/NavigationTypes";
+
+    // Load motion one
+    import { timeline } from "motion";
+
+    // Import types
+    import { TimelineSegment } from "@motionone/dom/types/timeline/types";
 
     // Create a ref to the navigation links
     const navigationLinks = ref<NavigationLinks>([
@@ -36,4 +42,36 @@
             scrollToId: "contact",
         },
     ]);
+
+    // When component is mounted
+    onMounted(() => {
+        const navigationLinks: NodeListOf<HTMLLIElement> = document.querySelectorAll("#navbar li");
+        const navigationLinksLength: number = navigationLinks.length;
+
+        // Create timeline segment for each navigation link with extra delay
+        const navigationLinksTimeline: TimelineSegment[] = [];
+
+        for (let i = 0; i < navigationLinksLength; i++) {
+            navigationLinksTimeline.push([
+                `#navbar li:nth-child(${i + 1})`,
+                {
+                    opacity: 1,
+                    x: 20,
+                },
+            ]);
+        }
+
+        console.log("navigationLinksTimeline", navigationLinksTimeline);
+
+        const sequence: TimelineSegment[] = [
+            [
+                "#navbar",
+                {
+                    x: -20,
+                },
+            ],
+            ...navigationLinksTimeline,
+        ];
+        timeline(sequence, { duration: 1 });
+    });
 </script>
