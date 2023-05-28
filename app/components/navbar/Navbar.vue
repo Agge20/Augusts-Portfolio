@@ -2,10 +2,14 @@
     <header id="header" class="relative z-20 flex h-32 w-full">
         <div class="center flex w-full justify-end">
             <!-- Navigation links -->
-            <ul id="navbar" class="flex items-center">
+            <ul id="navbar" class="hidden items-center md:flex">
                 <navigation-link v-for="link in navigationLinks" :key="link.scrollToId" :link="link" />
             </ul>
             <socials />
+            <!-- Hamburger -->
+            <div class="md:hidden right-4 top-6 fixed">
+              <icon name="ci:hamburger-md" size="3.5em" :class="theme === 'light' ? 'text-dark-100' : 'text-white'" />
+            </div>
         </div>
     </header>
 </template>
@@ -22,6 +26,14 @@
 
     // Import types
     import { TimelineSegment } from "@motionone/dom/types/timeline/types";
+
+    // Store imports
+    import { useMainStore } from "~/stores/MainStore";
+    import { storeToRefs } from "pinia";
+
+    // Stores
+    const mainStore = useMainStore();
+    const { theme } = storeToRefs(mainStore);
 
     // Create a ref to the navigation links
     const navigationLinks = ref<NavigationLinks>([
