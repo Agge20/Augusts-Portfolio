@@ -1,4 +1,4 @@
-const particlesTSLightModeConfig = {
+const particlesTSLightModeConfig: object = {
     fpsLimit: 144,
     background: {
         color: {
@@ -74,10 +74,10 @@ const particlesTSLightModeConfig = {
         },
         line_linked: {
             enable: true,
-            distance: 150,
+            distance: 135,
             color: "#181B1F",
             opacity: 0.4,
-            width: 1,
+            width: 0.75,
         },
         move: {
             enable: true,

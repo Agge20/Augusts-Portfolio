@@ -9,10 +9,10 @@ export default defineNuxtConfig({
         "@/assets/css/main.css",
         "@/assets/css/fonts.css",
     ],
-    plugins: [
-        {
-            src: "~/plugins/tsParticles.client.ts",
-            ssr: false,
+
+    vue: {
+        compilerOptions: {
+            // isCustomElement: (tag) => ["particles"].includes(tag),
         },
-    ],
+    },
 });
