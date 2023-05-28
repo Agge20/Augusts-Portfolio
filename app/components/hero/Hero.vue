@@ -1,14 +1,27 @@
 <template>
     <particles
+        v-if="theme === 'dark'"
+        id="tsparticles"
+        :particlesInit="particlesInit"
+        :options="particlesTSDarkModeConfig"
+        :class="particlesHasBeenAnimated ? 'opacity-100' : 'opacity-0'"
+        class="animate-fade-in absolute left-0 top-0 h-screen w-full"
+    />
+
+    <particles
+        v-else
         id="tsparticles"
         :particlesInit="particlesInit"
         :options="particlesTSLightModeConfig"
-        class="animate-fade-in absolute top-0 h-screen w-full"
+        :class="particlesHasBeenAnimated ? 'opacity-100' : 'opacity-0'"
+        class="animate-fade-in absolute left-0 top-0 h-screen w-full"
     />
-    <div class="text-white-100 z-20 flex h-screen w-full flex-col items-center justify-center">
-        <heading :size="HeadingSize.H1" :text="'Hello'" :color="mainStore.theme === 'light' ? 'text-dark-100' : 'text-white'" />
-        <h2 id="my-name-is">My name is <span>August</span></h2>
-        <h3 id="build-with">I build stuff with:</h3>
+
+    <div class="text-white-100 relative z-20 flex h-[calc(100vh_-_8rem)] w-full flex-col items-start justify-center border-2">
+        <!-- Use unique "hero" headings here instead of headings-component-->
+        <hero-header-one id="hello" />
+        <hero-header-two id="my-name-is" />
+        <hero-header-three id="build-with" />
     </div>
 </template>
 
@@ -16,11 +29,13 @@
     // Import particleTS config
     import { particlesTSLightModeConfig } from "~/config/particlesTSLightMode";
     import { particlesTSDarkModeConfig } from "~/config/particlesTSDarkMode";
+    import Particles from "@/node_modules/vue3-particles/src/components/Particles.vue";
 
     import { loadFull } from "tsparticles";
 
     // Store imports
     import { useMainStore } from "~/stores/MainStore";
+    import { storeToRefs } from "pinia";
 
     // Load motion one
     import { timeline } from "motion";
@@ -28,29 +43,63 @@
     // Import Motion One types
     import { TimelineSegment } from "@motionone/dom/types/timeline/types";
 
-    // Import Types
-    import { HeadingSize } from "@/types/HeadingTypes";
-
     const particlesInit = async (engine: any) => {
         await loadFull(engine);
     };
 
-    // When component is mounted
+    // Use the main store
+    const mainStore = useMainStore();
+    const { theme } = storeToRefs(mainStore);
+
+    // State
+    const particlesHasBeenAnimated = ref(false);
+
+    // Components
+    import HeroHeaderOne from "./HeroHeaderOne.vue";
+    import HeroHeaderTwo from "./HeroHeaderTwo.vue";
+    import HeroHeaderThree from "./HeroHeaderThree.vue";
+
+    // When component is mounted play animation
     onMounted(() => {
-        const hello: TimelineSegment = [
-            "#scene-1",
-            {
-                opacity: 1,
-            },
-            { duration: 4 },
+        const sequence: TimelineSegment[] = [
+            [
+                "#hello",
+                {
+                    opacity: 1,
+                    x: 20,
+                },
+                { duration: 1.5 },
+            ],
+
+            [
+                "#my-name-is",
+                {
+                    opacity: 1,
+                    x: 20,
+                },
+                { duration: 1.35 },
+            ],
+
+            [
+                "#build-with",
+                {
+                    opacity: 1,
+                    x: 20,
+                },
+                { duration: 1 },
+            ],
+            [
+                "#tsparticles",
+                {
+                    opacity: 1,
+                },
+                { duration: 1 },
+            ],
         ];
 
         // Create timeline
-        timeline([hello], { duration: 1 });
+        timeline(sequence, { delay: 1.25, direction: "normal" });
+
+        particlesHasBeenAnimated.value = true;
     });
-
-    // Use the main store
-    const mainStore = useMainStore();
-
-    console.log(mainStore.theme);
 </script>

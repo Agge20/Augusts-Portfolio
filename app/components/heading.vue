@@ -1,5 +1,5 @@
 <template>
-    <h1 :class="textColor">{{ text }}</h1>
+    <h1 class="font-gs-bold text-9xl" :class="textColor">{{ text }}</h1>
 </template>
 
 <script setup lang="ts">

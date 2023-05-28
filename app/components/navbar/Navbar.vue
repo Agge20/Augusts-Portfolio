@@ -1,5 +1,5 @@
 <template>
-    <header id="header" class="content fixed top-8 flex h-32 w-full">
+    <header id="header" class="relative z-20 flex h-32 w-full">
         <div class="center flex w-full justify-end">
             <!-- Navigation links -->
             <ul id="navbar" class="flex items-center">
@@ -60,8 +60,6 @@
                 },
             ]);
         }
-
-        console.log("navigationLinksTimeline", navigationLinksTimeline);
 
         const sequence: TimelineSegment[] = [
             [

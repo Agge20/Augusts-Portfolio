@@ -1,35 +1,38 @@
 import { defineStore } from "pinia";
 
-// Import the state type of the store
-import { MainStoreState } from "@/types/MainStoreState";
-
 export const useMainStore = defineStore("mainStore", {
-    state: (): MainStoreState => {
+    state: () => {
+        // Define what color theme should be used
+        const theme = ref<"dark" | "light">("light");
+
         return {
-            // for initially empty lists
-            theme: "light",
+            theme,
         };
     },
     actions: {
         checkUserThemePreference() {
-            // Check if user preference is stored in local storage
-            const preference = localStorage.getItem("themePreference");
+            // Check if the user has a theme preference
+            const themePreference = localStorage.getItem("themePreference");
 
-            if (preference === "light" || preference === "dark") {
-                // User preference is stored, update the state
-                this.theme = preference;
+            // If the user has a theme preference, use that
+            if (themePreference === "light") {
+                this.theme = "light";
+            } else if (themePreference === "dark") {
+                this.theme = "dark";
             } else {
-                // User preference is not stored, check if it is set in the operating system
-                const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-                if (mediaQuery.matches) {
-                    // Dark mode is preferred in the operating system
-                    this.theme = "dark";
-                } else {
-                    // Light mode is preferred in the operating system
-                    this.theme = "light";
-                }
+                this.theme = "light";
             }
+        },
+        // Toggle the theme between light and dark
+        toggleTheme() {
+            if (this.theme === "light") {
+                this.theme = "dark";
+            } else {
+                this.theme = "light";
+            }
+
+            // Store the user preference in local storage
+            localStorage.setItem("themePreference", this.theme);
         },
     },
 });

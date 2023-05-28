@@ -1,8 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    plugins: [
+        require("@tailwindcss/typography"),
+        require("tailwind-fluid-typography"),
+        // ...
+    ],
     content: ["./templates/**/*.{html,js,twig}", "./components/**/*.{html,twig}"],
     theme: {
+        fluidTypography: {},
         colors: {
+            transparent: "transparent",
             green: {
                 100: "#37F286",
                 200: "#23CE6B",

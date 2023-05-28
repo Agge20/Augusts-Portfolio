@@ -1,20 +1,29 @@
 <template>
-    <main class="dark:bg-dark-100 min-h-screen">
-        <navbar />
-        <hero />
+    <spinner v-if="!themeHasBeenLoaded" />
+    <main v-if="themeHasBeenLoaded" :class="theme === 'light' ? 'bg-white' : 'bg-dark-100'" class="min-h-screen overflow-x-hidden transition">
+        <!-- Center content -->
+        <div class="mx-auto max-w-screen-2xl px-4 md:px-8 lg:px-12 xl:px-16">
+            <navbar />
+            <hero />
+            <change-light-theme />
+        </div>
     </main>
 </template>
 
 <script setup lang="ts">
     // Import the main store
     import { useMainStore } from "~/stores/MainStore";
+    import { storeToRefs } from "pinia";
 
     // Use the store
     const mainStore = useMainStore();
+    const { theme } = storeToRefs(mainStore);
+    const themeHasBeenLoaded = ref(false);
 
     // On mounted
     onMounted(() => {
         // Check the user theme preference
         mainStore.checkUserThemePreference();
+        themeHasBeenLoaded.value = true;
     });
 </script>
