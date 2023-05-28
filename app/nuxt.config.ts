@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    modules: ["@nuxtjs/tailwindcss", 'nuxt-icon'],
+    modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@pinia/nuxt"],
     tailwindcss: {
         configPath: "~/config/tailwind.js",
     },
@@ -9,4 +9,10 @@ export default defineNuxtConfig({
         "@/assets/css/main.css",
         "@/assets/css/fonts.css",
     ],
+
+    vue: {
+        compilerOptions: {
+            // isCustomElement: (tag) => ["particles"].includes(tag),
+        },
+    },
 });

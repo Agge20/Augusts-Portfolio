@@ -1,7 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    plugins: [
+        require("@tailwindcss/typography"),
+        require("tailwind-fluid-typography"),
+        // ...
+    ],
     content: ["./templates/**/*.{html,js,twig}", "./components/**/*.{html,twig}"],
     theme: {
+        fluidTypography: {},
+        colors: {
+            transparent: "transparent",
+            green: {
+                100: "#37F286",
+                200: "#23CE6B",
+                300: "#1E944F",
+                400: "#187A42",
+            },
+            dark: {
+                100: "#181B1F",
+                200: "#0F0F0F",
+            },
+            white: "#FFFFFF",
+            "linkedin-blue": "#0077B5",
+        },
         extend: {
             fontFamily: {
                 "gs-regular": ["General-Sans-Regular"],
@@ -9,23 +30,7 @@ module.exports = {
                 "gs-semibold": ["General-Sans-Semibold"],
                 "gs-bold": ["General-Sans-Bold"],
             },
-            colors: {
-                "ap-green": {
-                    100: "#37F286",
-                    200: "#23CE6B",
-                    300: "#1E944F",
-                    400: "#187A42",
-                },
-                "ap-dark": {
-                    100: "#181B1F",
-                    200: "#0F0F0F",
-                },
-                "ap-white": {
-                    100: "#FFFFFF",
-                },
-                'linkedin-blue': '#0077B5',
 
-            },
             minWidth: {
                 auto: "auto",
                 px: "1px",
@@ -84,6 +89,8 @@ module.exports = {
             },
             animation: {
                 "gradient-shine": "gradient-shine 2.5s linear infinite",
+                "expand-in": "expand-in 1.5s ease-in-out",
+                "fade-in": "fade-in 1.5s ease-in-out",
             },
             animationFill: {
                 forwards: "forwards",
@@ -98,6 +105,18 @@ module.exports = {
                         "background-size": "200% 200%",
                         "background-position": "0% center",
                     },
+                },
+                "expand-in": {
+                    "0%": {
+                        transform: "scale(0)",
+                    },
+                    "100%": {
+                        transform: "scale(1)",
+                    },
+                },
+                "fade-in": {
+                    "0%": { opacity: 0 },
+                    "100%": { opacity: 1 },
                 },
             },
         },
