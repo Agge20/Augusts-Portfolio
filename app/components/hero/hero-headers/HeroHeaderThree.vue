@@ -1,5 +1,8 @@
 <template>
-    <h3 :class="theme === 'light' ? 'text-dark-200' : 'text-white'" class=" translate-x-[20px] font-gs-semibold lg:fluid-3xl mt-2 text-3xl opacity-0 transition sm:mt-0">
+    <h3
+        :class="theme === 'light' ? 'text-dark-200' : 'text-white'"
+        class="font-gs-semibold lg:fluid-3xl mt-2 text-3xl opacity-0 transition sm:mt-0"
+    >
         I build stuff with:
     </h3>
 </template>
@@ -9,7 +12,7 @@
     import { useMainStore } from "~/stores/MainStore";
     import { storeToRefs } from "pinia";
 
-    // Use the main store
+    // Stores
     const mainStore = useMainStore();
     const { theme } = storeToRefs(mainStore);
 </script>
