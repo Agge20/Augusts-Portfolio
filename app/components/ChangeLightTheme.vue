@@ -2,7 +2,7 @@
     <div
         @click="mainStore.toggleTheme()"
         :class="mainStore.theme === 'light' ? 'bg-dark-100' : 'bg-white'"
-        class="group absolute left-4 top-4 z-30 flex h-16 w-16 cursor-pointer items-center justify-center rounded-full transition sm:bottom-4 sm:top-auto"
+        class="group absolute left-4 top-4 z-30 flex h-16 w-16 cursor-pointer items-center justify-center rounded-full transition md:bottom-4 md:top-auto"
     >
         <icon
             v-if="mainStore.theme === 'light'"
