@@ -3,21 +3,19 @@
         <div class="center flex w-full justify-end">
             <!-- Navigation links -->
             <ul id="navbar" class="hidden items-center md:flex">
-                <navigation-link v-for="link in navigationLinks" :key="link.scrollToId" :link="link" />
+                <navbar-link v-for="link in navigationLinks" :key="link.scrollToId" :link="link" />
             </ul>
             <socials />
             <!-- Hamburger -->
-            <div class="md:hidden right-4 top-6 fixed">
-              <icon name="ci:hamburger-md" size="3.5em" :class="theme === 'light' ? 'text-dark-100' : 'text-white'" />
+            <div id="hamburger" @click="openNavbarMobile = !openNavbarMobile" class="fixed right-4 top-6 z-30 flex flex-col gap-2 md:hidden">
+                <span v-for="index in 3" :key="index" class="inline-block h-[3px] w-8 rounded-full" :class="hamburgerColor"></span>
             </div>
+            <navbar-mobile v-if="openNavbarMobile" :links="navigationLinks" />
         </div>
     </header>
 </template>
 
 <script lang="ts" setup>
-    // Import the NavigationLink component
-    import NavigationLink from "@/components/navbar/NavigationLink.vue";
-
     // Import the allowed navigation types
     import { NavigationLinks, NavigationText } from "@/types/NavigationTypes";
 
@@ -34,6 +32,11 @@
     // Stores
     const mainStore = useMainStore();
     const { theme } = storeToRefs(mainStore);
+
+    // State
+    const openNavbarMobile = ref<boolean>(false);
+
+    const hamburgerColor = ref<string>("text-white");
 
     // Create a ref to the navigation links
     const navigationLinks = ref<NavigationLinks>([
@@ -73,7 +76,7 @@
             ]);
         }
 
-        const sequence: TimelineSegment[] = [
+        const navbarSequence: TimelineSegment[] = [
             [
                 "#navbar",
                 {
@@ -82,6 +85,55 @@
             ],
             ...navigationLinksTimeline,
         ];
-        timeline(sequence, { duration: 1 });
+        timeline(navbarSequence, { duration: 1 });
+
+        // If mobile navbar is opened animate the hamburger
+        const hamburgerSequenceOpen: TimelineSegment[] = [
+            [
+                "#hamburger span:nth-child(1)",
+                {
+                    opacity: 1,
+                    y: [0, 11],
+                },
+            ],
+            [
+                "#hamburger span:nth-child(3)",
+                {
+                    opacity: 1,
+                    y: [0, -11],
+                },
+            ],
+        ];
+
+        // If mobile navbar is closed animate then hamburger
+        const hamburgerSequenceClose: TimelineSegment[] = [
+            [
+                "#hamburger span:nth-child(1)",
+                {
+                    opacity: 1,
+                    y: [11, 0],
+                },
+            ],
+            [
+                "#hamburger span:nth-child(3)",
+                {
+                    opacity: 1,
+                    y: [-11, 0],
+                },
+            ],
+        ];
+
+        watchEffect(() => {
+            // When hamburger has been opened
+            if (openNavbarMobile.value) {
+                hamburgerColor.value = "bg-white";
+                // Run the open hamburger animation after 1.5 seconds
+                timeline(hamburgerSequenceOpen, { duration: 0.5, delay: 1.25 });
+            } else {
+                // Run the close hamburger animation
+                hamburgerColor.value = theme.value === "light" ? "bg-dark-100" : "bg-white";
+                timeline(hamburgerSequenceClose, { duration: 0.5 });
+            }
+        });
     });
 </script>
