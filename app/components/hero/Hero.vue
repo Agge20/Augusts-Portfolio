@@ -22,7 +22,15 @@
         <!-- Use unique "hero" headings here instead of headings-component-->
         <hero-header-one id="hello" class="translate-x-[20px]" />
         <hero-header-two id="my-name-is" />
-        <hero-header-three id="build-with" />
+        <div class="flex items-center">
+            <hero-header-three id="build-with" />
+            <div id="skills">
+                <!-- Loop out all the documents -->
+                <hero-skill v-for="(skill, index) in skillsData" :key="index" class="test">
+                    <content-renderer class="relative text-center" :value="skill" />
+                </hero-skill>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -39,7 +47,7 @@
     import { storeToRefs } from "pinia";
 
     // Motion one
-    import { timeline } from "motion";
+    import { timeline, animate } from "motion";
 
     // Motion One types
     import { TimelineSegment } from "@motionone/dom/types/timeline/types";
@@ -57,7 +65,7 @@
 
     // When component is mounted play animation
     onMounted(() => {
-        const sequence: TimelineSegment[] = [
+        const heroTextSequence: TimelineSegment[] = [
             [
                 "#hello",
                 {
@@ -92,8 +100,12 @@
         ];
 
         // Create timeline
-        timeline(sequence, { delay: 1.25, direction: "normal" });
+        timeline(heroTextSequence, { delay: 1.25, direction: "normal" });
 
         particlesHasBeenAnimated.value = true;
     });
+
+    // Fetch all the skills content data
+    // @ts-ignore
+    const { data: skillsData } = await useAsyncData("home", () => queryContent("/skills").find());
 </script>

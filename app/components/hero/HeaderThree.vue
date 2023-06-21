@@ -1,7 +1,7 @@
 <template>
     <h3
         :class="theme === 'light' ? 'text-dark-200' : 'text-white'"
-        class="font-gs-semibold lg:fluid-3xl mt-2 text-3xl opacity-0 transition sm:mt-0"
+        class="font-gs-semibold lg:fluid-3xl mr-4 mt-2 text-3xl opacity-0 transition sm:mt-0"
     >
         I build stuff with:
     </h3>
