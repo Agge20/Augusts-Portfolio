@@ -91,6 +91,7 @@ module.exports = {
                 "gradient-shine": "gradient-shine 2.5s linear infinite",
                 "expand-in": "expand-in 1.5s ease-in-out",
                 "fade-in": "fade-in 1.5s ease-in-out",
+                "slide-in-from-right": "slide-in-from-right 0.5s ease-in-out",
             },
             animationFill: {
                 forwards: "forwards",
@@ -117,6 +118,16 @@ module.exports = {
                 "fade-in": {
                     "0%": { opacity: 0 },
                     "100%": { opacity: 1 },
+                },
+                "slide-in-from-right": {
+                    "0%": {
+                        transform: "translateX(100%)",
+                        opacity: 0,
+                    },
+                    "100%": {
+                        transform: "translateX(0)",
+                        opacity: 1,
+                    },
                 },
             },
         },
