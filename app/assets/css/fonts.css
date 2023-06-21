@@ -1,9 +1,7 @@
 @font-face {
     font-family: "General-Sans-Regular";
-    src: url("../../fonts/woff/GeneralSans-Regular.woff") format("woff"),
-        url("../../fonts/woff2/GeneralSans-Regular.woff2") format("woff2"),
-        url("../../fonts/ttf/GeneralSans-Regular.ttf") format("truetype"),
-        url("../../fonts/eot/GeneralSans-Regular.eot") format("embedded-opentype");
+    src: url("../../fonts/woff/GeneralSans-Regular.woff") format("woff"), url("../../fonts/woff2/GeneralSans-Regular.woff2") format("woff2"),
+        url("../../fonts/ttf/GeneralSans-Regular.ttf") format("truetype"), url("../../fonts/eot/GeneralSans-Regular.eot") format("embedded-opentype");
     font-style: normal;
     font-weight: normal;
     text-rendering: optimizeLegibility;
@@ -12,10 +10,8 @@
 
 @font-face {
     font-family: "General-Sans-Medium";
-    src: url("../../fonts/woff/GeneralSans-Medium.woff") format("woff"),
-        url("../../fonts/woff2/GeneralSans-Medium.woff2") format("woff2"),
-        url("../../fonts/ttf/GeneralSans-Medium.ttf") format("truetype"),
-        url("../../fonts/eot/GeneralSans-Medium.eot") format("embedded-opentype");
+    src: url("../../fonts/woff/GeneralSans-Medium.woff") format("woff"), url("../../fonts/woff2/GeneralSans-Medium.woff2") format("woff2"),
+        url("../../fonts/ttf/GeneralSans-Medium.ttf") format("truetype"), url("../../fonts/eot/GeneralSans-Medium.eot") format("embedded-opentype");
     font-style: normal;
     font-weight: normal;
     text-rendering: optimizeLegibility;
@@ -24,8 +20,7 @@
 
 @font-face {
     font-family: "General-Sans-Semibold";
-    src: url("../../fonts/woff/GeneralSans-Semibold.woff") format("woff"),
-        url("../../fonts/woff2/GeneralSans-Semibold.woff2") format("woff2"),
+    src: url("../../fonts/woff/GeneralSans-Semibold.woff") format("woff"), url("../../fonts/woff2/GeneralSans-Semibold.woff2") format("woff2"),
         url("../../fonts/ttf/GeneralSans-Semibold.ttf") format("truetype"),
         url("../../fonts/eot/GeneralSans-Semibold.eot") format("embedded-opentype");
     font-style: normal;
@@ -36,10 +31,8 @@
 
 @font-face {
     font-family: "General-Sans-Bold";
-    src: url("../../fonts/woff/GeneralSans-Bold.woff") format("woff"),
-        url("../../fonts/woff2/GeneralSans-Bold.woff2") format("woff2"),
-        url("../../fonts/ttf/GeneralSans-Bold.ttf") format("truetype"),
-        url("../../fonts/eot/GeneralSans-Bold.eot") format("embedded-opentype");
+    src: url("../../fonts/woff/GeneralSans-Bold.woff") format("woff"), url("../../fonts/woff2/GeneralSans-Bold.woff2") format("woff2"),
+        url("../../fonts/ttf/GeneralSans-Bold.ttf") format("truetype"), url("../../fonts/eot/GeneralSans-Bold.eot") format("embedded-opentype");
     font-style: normal;
     font-weight: bold;
     text-rendering: optimizeLegibility;

@@ -5,7 +5,7 @@ module.exports = {
         require("tailwind-fluid-typography"),
         // ...
     ],
-    content: ["./templates/**/*.{html,js,twig}", "./components/**/*.{html,twig}"],
+    content: ["./templates/**/*.{html,js,twig}", "./components/**/*.{html,twig}", "./content/**/*.{md,json}"],
     theme: {
         fluidTypography: {},
         colors: {
