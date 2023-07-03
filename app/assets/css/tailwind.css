@@ -15,4 +15,13 @@ html {
     .content {
         @apply px-4 md:px-8 lg:px-12 xl:px-16;
     }
+
+    .skill-image {
+        @apply rounded-lg;
+    }
+
+    .skill-text {
+        @apply font-gs-medium absolute w-full text-xl;
+        font-family: "General-Sans-Medium", system-ui, sans-serif;
+    }
 }

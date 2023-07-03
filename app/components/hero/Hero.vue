@@ -22,13 +22,12 @@
         <!-- Use unique "hero" headings here instead of headings-component-->
         <hero-header-one id="hello" class="translate-x-[20px]" />
         <hero-header-two id="my-name-is" />
-        <div class="flex items-center">
+        <!-- Skills wrapper -->
+        <div class="flex flex-row items-center">
             <hero-header-three id="build-with" />
             <div id="skills">
                 <!-- Loop out all the documents -->
-                <hero-skill v-for="(skill, index) in skillsData" :key="index" class="test">
-                    <content-renderer class="relative text-center" :value="skill" />
-                </hero-skill>
+                <hero-skills />
             </div>
         </div>
     </div>
@@ -47,7 +46,7 @@
     import { storeToRefs } from "pinia";
 
     // Motion one
-    import { timeline, animate } from "motion";
+    import { timeline } from "motion";
 
     // Motion One types
     import { TimelineSegment } from "@motionone/dom/types/timeline/types";
@@ -104,8 +103,4 @@
 
         particlesHasBeenAnimated.value = true;
     });
-
-    // Fetch all the skills content data
-    // @ts-ignore
-    const { data: skillsData } = await useAsyncData("home", () => queryContent("/skills").find());
 </script>

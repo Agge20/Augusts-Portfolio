@@ -1,3 +1,3 @@
-<img src="/svg/skills/javascript.svg" alt="JavaScript Logo" class="rounded-lg" />
+<img src="/svg/skills/javascript.svg" alt="JavaScript Logo" class="skill-image" />
 
-<p class="absolute w-full text-xl text-white font-gs-medium ">JavaScript</p>
+<p class="skill-text">JavaScript</p>

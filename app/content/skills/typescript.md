@@ -1,3 +1,3 @@
-<img src="/svg/skills/typescript.svg" alt="TypeScript Logo" class="rounded-lg" />
+<img src="/svg/skills/typescript.svg" alt="TypeScript Logo" class="skill-image" />
 
-<p class="absolute w-full text-xl text-white font-gs-medium">TypeScript</p>
+<p class="skill-text">TypeScript</p>
