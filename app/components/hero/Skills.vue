@@ -37,6 +37,7 @@
                 for (let i = 0; i < skillsArray.length; i++) {
                     const skillToRemove = skillsArray[i] as HTMLDivElement;
                     skillToRemove.classList.add("hidden");
+                    skillToRemove.classList.remove("first:inline-block");
                 }
 
                 skill.classList.remove("hidden");

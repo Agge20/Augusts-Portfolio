@@ -23,7 +23,7 @@
         <hero-header-one id="hello" class="translate-x-[20px]" />
         <hero-header-two id="my-name-is" />
         <!-- Skills wrapper -->
-        <div class="flex flex-row items-center">
+        <div class="mt-4 flex min-h-[112px] flex-row items-center">
             <hero-header-three id="build-with" />
             <div id="skills">
                 <!-- Loop out all the documents -->

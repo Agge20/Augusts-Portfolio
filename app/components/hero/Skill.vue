@@ -1,5 +1,8 @@
 <template>
-    <div class="h-28 w-28 flex-col justify-center text-center opacity-0" :class="[theme === 'light' ? 'text-dark-200' : 'text-white']">
+    <div
+        class="hidden h-28 w-28 flex-col justify-center text-center opacity-0 first:inline-block"
+        :class="[theme === 'light' ? 'text-dark-200' : 'text-white']"
+    >
         <slot></slot>
     </div>
 </template>
