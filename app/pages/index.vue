@@ -7,6 +7,15 @@
             <hero />
             <change-light-theme />
         </div>
+        <div class="mx-auto max-w-screen-2xl px-4 md:px-8 lg:px-12 xl:px-16">
+            <text-and-heading
+                v-if="aboutMeTextData"
+                :headingText="aboutMeTextData[0].heading_text"
+                :highlightText="aboutMeTextData[0].highlight_text"
+                :highlightAlignment="'start'"
+                :text="aboutMeTextData[0].text"
+            />
+        </div>
     </main>
 </template>
 
@@ -26,4 +35,7 @@
         mainStore.checkUserThemePreference();
         themeHasBeenLoaded.value = true;
     });
+
+    // Fetch the about me text json-data
+    const { data: aboutMeTextData } = await useFetch('/api/_content/query?_params={"where":{"_path":"/json/text/about-me"}}');
 </script>

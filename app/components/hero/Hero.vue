@@ -6,7 +6,7 @@
         :options="particlesTSDarkModeConfig"
         :class="particlesHasBeenAnimated ? 'opacity-100' : 'opacity-0'"
         id="tsparticles"
-        class="animate-fade-in absolute left-0 top-0 h-screen w-full"
+        class="animate-fade-in fixed left-0 top-0 min-h-screen w-full"
     />
     <!-- Light mode particles -->
     <particles

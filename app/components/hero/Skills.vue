@@ -12,7 +12,7 @@
     import { onUpdated } from "vue";
     // Fetch all the skills content data
     // @ts-ignore
-    const { data: skillsData } = await useAsyncData("home", () => queryContent("/skills").find());
+    const { data: skillsData } = await useAsyncData("home", () => queryContent("/md/skills").find());
 
     // Motion One types
     import { TimelineSegment } from "@motionone/dom/types/timeline/types";

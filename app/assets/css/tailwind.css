@@ -17,7 +17,7 @@ html {
     }
 
     .skill-image {
-        @apply rounded-lg;
+        @apply w-full rounded-lg md:h-28 md:w-28;
     }
 
     .skill-text {
