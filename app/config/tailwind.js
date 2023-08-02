@@ -116,6 +116,7 @@ module.exports = {
                 "expand-in": "expand-in 1.5s ease-in-out",
                 "fade-in": "fade-in 1.5s ease-in-out",
                 "slide-in-from-right": "slide-in-from-right 0.5s ease-in-out",
+                "slide-in-from-left": "slide-in-from-left 0.5s ease-in-out",
             },
             animationFill: {
                 forwards: "forwards",
@@ -146,6 +147,24 @@ module.exports = {
                 "slide-in-from-right": {
                     "0%": {
                         transform: "translateX(100%)",
+                        opacity: 0,
+                    },
+                    "75%": {
+                        transform: "translateX(50%)",
+                        opacity: 0,
+                    },
+                    "100%": {
+                        transform: "translateX(0)",
+                        opacity: 1,
+                    },
+                },
+                "slide-in-from-left": {
+                    "0%": {
+                        transform: "translateX(-100%)",
+                        opacity: 0,
+                    },
+                    "75%": {
+                        transform: "translateX(-50%)",
                         opacity: 0,
                     },
                     "100%": {
