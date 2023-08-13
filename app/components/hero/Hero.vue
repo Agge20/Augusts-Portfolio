@@ -6,7 +6,7 @@
         :options="particlesTSDarkModeConfig"
         :class="particlesHasBeenAnimated ? 'opacity-100' : 'opacity-0'"
         id="tsparticles"
-        class="animate-fade-in absolute left-0 top-0 h-screen w-full"
+        class="animate-fade-in fixed left-0 top-0 min-h-screen w-full"
     />
     <!-- Light mode particles -->
     <particles
@@ -18,11 +18,18 @@
         class="animate-fade-in absolute left-0 top-0 h-screen w-full"
     />
 
-    <div id="test" class="text-white-100 relative z-20 flex h-[calc(100vh_-_8rem)] w-full flex-col items-start mt-16 sm:mt-0 justify-start sm:justify-center">
+    <div class="text-white-100 relative mt-16 flex h-[calc(100vh_-_8rem)] w-full flex-col items-start justify-start sm:mt-0 sm:justify-center">
         <!-- Use unique "hero" headings here instead of headings-component-->
         <hero-header-one id="hello" class="translate-x-[20px]" />
         <hero-header-two id="my-name-is" />
-        <hero-header-three id="build-with" />
+        <!-- Skills wrapper -->
+        <div class="mt-4 flex min-h-[112px] flex-row items-center">
+            <hero-header-three id="build-with" />
+            <div id="skills">
+                <!-- Loop out all the documents -->
+                <hero-skills />
+            </div>
+        </div>
     </div>
 </template>
 
@@ -55,29 +62,22 @@
     // Component state
     const particlesHasBeenAnimated = ref<boolean>(false);
 
-    // Components
-    import HeroHeaderOne from "./hero-headers/HeroHeaderOne.vue";
-    import HeroHeaderTwo from "./hero-headers/HeroHeaderTwo.vue";
-    import HeroHeaderThree from "./hero-headers/HeroHeaderThree.vue";
-
     // When component is mounted play animation
     onMounted(() => {
-        const sequence: TimelineSegment[] = [
+        const heroTextSequence: TimelineSegment[] = [
             [
                 "#hello",
                 {
-                  opacity: 1,
-                  x: [-20, 0],
+                    opacity: 1,
+                    x: [-20, 0],
                 },
                 { duration: 1.5 },
-            ], 
-           
+            ],
             [
                 "#my-name-is",
                 {
                     opacity: 1,
-                  x: [-20, 0],
-
+                    x: [-20, 0],
                 },
                 { duration: 1.35 },
             ],
@@ -85,9 +85,7 @@
                 "#build-with",
                 {
                     opacity: 1,
-                  x: [-20, 0],
-                  
-
+                    x: [-20, 0],
                 },
                 { duration: 1 },
             ],
@@ -101,7 +99,7 @@
         ];
 
         // Create timeline
-        timeline(sequence, { delay: 1.25, direction: "normal" });
+        timeline(heroTextSequence, { delay: 1.25, direction: "normal" });
 
         particlesHasBeenAnimated.value = true;
     });

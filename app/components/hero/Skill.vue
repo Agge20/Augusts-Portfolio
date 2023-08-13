@@ -1,10 +1,10 @@
 <template>
-    <h3
-        :class="theme === 'light' ? 'text-dark-200' : 'text-white'"
-        class="font-gs-semibold lg:fluid-3xl mt-2 text-3xl opacity-0 transition sm:mt-0"
+    <div
+        class="hidden h-28 w-28 flex-col justify-center text-center opacity-0 first:inline-block"
+        :class="[theme === 'light' ? 'text-dark-200' : 'text-white']"
     >
-        I build stuff with:
-    </h3>
+        <slot></slot>
+    </div>
 </template>
 
 <script setup lang="ts">

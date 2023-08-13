@@ -7,6 +7,19 @@
             <hero />
             <change-light-theme />
         </div>
+        <div class="mx-auto max-w-screen-2xl px-4 md:px-8 lg:px-12 xl:px-16">
+            <!-- About me text section -->
+            <text-and-heading
+                v-if="aboutMeTextData"
+                ref="aboutMe"
+                :headingText="aboutMeTextData[0].heading_text"
+                :highlightText="aboutMeTextData[0].highlight_text"
+                :highlightAlignment="'start'"
+                :text="aboutMeTextData[0].text"
+                :class="{ 'animate-slide-in-from-left mt-16 opacity-100 transition': aboutMeIsVisible, 'opacity-0': !aboutMeIsVisible }"
+            />
+            
+        </div>
     </main>
 </template>
 
@@ -25,5 +38,17 @@
         // Check the user theme preference
         mainStore.checkUserThemePreference();
         themeHasBeenLoaded.value = true;
+    });
+
+    // Fetch the about me text json-data
+    const { data: aboutMeTextData } = await useFetch('/api/_content/query?_params={"where":{"_path":"/json/text/about-me"}}');
+
+    import { useElementVisibility } from "@vueuse/core";
+
+    const aboutMe = ref(null);
+    const aboutMeIsVisible = useElementVisibility(aboutMe);
+
+    watchEffect(() => {
+        console.log("target is now visible: ", aboutMeIsVisible.value);
     });
 </script>

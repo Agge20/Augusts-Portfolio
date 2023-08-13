@@ -1,12 +1,11 @@
 <template>
-    <li
-        class="hover:animate-gradient-shine text-dark-200 font-gs-semibold mx-6 cursor-pointer text-3xl opacity-0 last-of-type:mr-12 hover:bg-gradient-to-r hover:from-green-100 hover:via-green-400 hover:to-green-100 hover:bg-clip-text hover:text-transparent"
-    >
+    <li class="font-gs-semibold my-2 cursor-pointer text-2xl text-white opacity-0">
         <a :href="`#${link.scrollToId}`"> {{ link.text }} </a>
     </li>
 </template>
 
 <script setup lang="ts">
+    // Import types
     import { NavigationLink } from "@/types/NavigationTypes";
 
     // Create the interface of the props
