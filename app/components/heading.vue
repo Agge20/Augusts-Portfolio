@@ -35,6 +35,7 @@
     // Store imports
     import { useMainStore } from "~/stores/MainStore";
 
+    // Use the main store
     const mainStore = useMainStore();
 
     // Import the allowed heading sizes
@@ -50,5 +51,6 @@
         highlightAlignment: HighlightAlignment;
     }
 
+  
     defineProps<Props>();
 </script>

@@ -57,6 +57,7 @@
 
     // Stores
     const mainStore = useMainStore();
+    // Import the theme-state from the main store and destructure it into a ref
     const { theme } = storeToRefs(mainStore);
 
     // Component state
