@@ -13,5 +13,6 @@
     // Store imports
     import { useMainStore } from "~/stores/MainStore";
 
+    // Use the main store
     const mainStore = useMainStore();
 </script>

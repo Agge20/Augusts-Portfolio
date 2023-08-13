@@ -1,13 +1,13 @@
 <template>
     <spinner v-if="!themeHasBeenLoaded" />
-    <main v-if="themeHasBeenLoaded" :class="theme === 'light' ? 'bg-white' : 'bg-dark-100'" class="min-h-screen overflow-x-hidden transition">
+    <main v-if="themeHasBeenLoaded" :class="theme === 'light' ? 'bg-white' : 'bg-dark-100'" class="min-h-screen overflow-x-hidden pb-64 transition">
         <!-- Center content -->
         <div class="mx-auto max-w-screen-2xl px-4 md:px-8 lg:px-12 xl:px-16">
             <navbar />
             <hero />
             <change-light-theme />
         </div>
-        <div class="mx-auto max-w-screen-2xl px-4 md:px-8 lg:px-12 xl:px-16">
+        <div class="relative z-20 mx-auto max-w-screen-2xl px-4 md:px-8 lg:px-12 xl:px-16">
             <!-- About me text section -->
             <text-and-heading
                 v-if="aboutMeTextData"
@@ -16,9 +16,14 @@
                 :highlightText="aboutMeTextData[0].highlight_text"
                 :highlightAlignment="'start'"
                 :text="aboutMeTextData[0].text"
-                :class="{ 'animate-slide-in-from-left mt-16 opacity-100 transition': aboutMeIsVisible, 'opacity-0': !aboutMeIsVisible }"
+                :class="{ 'animate-fade-in mt-16 opacity-100 transition': aboutMeIsVisible, 'opacity-0': !aboutMeIsVisible }"
+                class="mb-24"
             />
-            
+            <!-- Main interests section -->
+            <main-interests-section
+                ref="myMainInterests"
+                :class="{ 'animate-fade-in mt-16 opacity-100 transition': myMainInterestsIsVisible, 'opacity-0': !myMainInterestsIsVisible }"
+            />
         </div>
     </main>
 </template>
@@ -47,8 +52,6 @@
 
     const aboutMe = ref(null);
     const aboutMeIsVisible = useElementVisibility(aboutMe);
-
-    watchEffect(() => {
-        console.log("target is now visible: ", aboutMeIsVisible.value);
-    });
+    const myMainInterests = ref(null);
+    const myMainInterestsIsVisible = useElementVisibility(myMainInterests);
 </script>

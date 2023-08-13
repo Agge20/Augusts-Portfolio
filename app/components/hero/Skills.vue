@@ -1,18 +1,19 @@
 <template>
     <div id="skills" class="flex">
         <!-- Loop out all the documents -->
-        <hero-skill v-for="(skill, index) in skillsData" :key="index" class="skill">
-            <content-renderer class="relative text-center" :value="skill" />
-        </hero-skill>
+        <hero-skill v-for="(skill, index) in skillsData" :key="index" class="skill" :skill="skill" />
     </div>
 </template>
 
 <script setup lang="ts">
     // Vue imports
     import { onUpdated } from "vue";
+
+    // Import the Skill type
+    import { Skill } from "~/types/Skill";
     // Fetch all the skills content data
-    // @ts-ignore
-    const { data: skillsData } = await useAsyncData("home", () => queryContent("/md/skills").find());
+    // @†s-ignore
+    const { data: skillsData }: { data: Skill[] } = await useAsyncData("home", () => queryContent("/json/skills").find());
 
     // Motion One types
     import { TimelineSegment } from "@motionone/dom/types/timeline/types";

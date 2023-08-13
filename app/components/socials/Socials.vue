@@ -1,9 +1,12 @@
 <template>
-    <ul :class="theme === 'light' ? 'bg-dark-200' : 'bg-white'" class="items-center animate-fade-in gap-3 self-center rounded-full px-4 py-3 z-20 hidden md:flex">
+    <ul
+        :class="theme === 'light' ? 'bg-dark-200' : 'bg-white'"
+        class="animate-fade-in z-20 hidden items-center gap-3 self-center rounded-full px-4 py-3 md:flex"
+    >
         <li class="rounded-md transition-all hover:scale-105">
-            <a :href="socialUrls.linkedin" target="_blank" class="h-full inline-block relative">
-                <span class="bg-white absolute top-1 left-1 inline-block w-4/5 h-4/5"></span>
-                <icon name="logos:linkedin-icon" size="2.5em" :class="theme === 'light' ? '' : 'text-dark-200'" class="rounded-md relative" />
+            <a :href="socialUrls.linkedin" target="_blank" class="relative inline-block h-full">
+                <span class="absolute left-1 top-1 inline-block h-4/5 w-4/5 bg-white"></span>
+                <icon name="logos:linkedin-icon" size="2.5em" :class="theme === 'light' ? '' : 'text-dark-200'" class="relative rounded-md" />
             </a>
         </li>
         <li class="rounded-md bg-black transition-all hover:scale-105">
@@ -22,7 +25,7 @@
     import { useMainStore } from "~/stores/MainStore";
     import { storeToRefs } from "pinia";
 
-    // Stores
+    // Use the main store
     const mainStore = useMainStore();
     const { theme } = storeToRefs(mainStore);
 </script>

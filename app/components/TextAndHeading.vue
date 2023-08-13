@@ -2,7 +2,6 @@
     <article class="max-w-3xl">
         <heading :size="HeadingSize.H2" :headingText="headingText" :highlightText="highlightText" :highlightAlignment="highlightAlignment" />
         <p class="mt-2 text-lg" :class="mainStore.theme === 'light' ? 'text-dark-200' : 'text-white'">{{ text }}</p>
-        {{ headingText }}
     </article>
 </template>
 

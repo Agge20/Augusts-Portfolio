@@ -117,6 +117,8 @@ module.exports = {
                 "fade-in": "fade-in 1.5s ease-in-out",
                 "slide-in-from-right": "slide-in-from-right 0.5s ease-in-out",
                 "slide-in-from-left": "slide-in-from-left 0.5s ease-in-out",
+                "card-text-slide-in": "card-text-slide-in 0.75s ease-in-out forwards",
+                "card-title-slide-in": "card-title-slide-in 0.75s ease-in-out forwards",
             },
             animationFill: {
                 forwards: "forwards",
