@@ -31,17 +31,20 @@
     watchEffect(() => {
         // When showCardText is true play animation
         if (showCardText.value) {
+            // Generate either true of false
+            const randomBoolean = Math.random() < 0.5;
+
             // Timeline sequence for the show text card animation
             const showCardTextSequence: TimelineSegment[] = [
                 [
                     // @ts-ignore
                     showCardTextRef.value,
                     {
-                        y: ["-5%", "105%"],
-                        rotateX: [0, -45],
+                        y: ["-5%", "125%"],
+                        rotateZ: [0, randomBoolean ? 10 : -10],
                     },
                     {
-                        duration: 0.5,
+                        duration: 0.4,
                     },
                 ],
 
@@ -61,7 +64,7 @@
                     showCardTextRef.value,
                     {
                         y: ["100%", 0],
-                        rotateX: 0,
+                        rotateZ: 0,
                     },
                     {
                         duration: 0.35,
