@@ -15,8 +15,9 @@
     import { useMainStore } from "~/stores/MainStore";
     import { storeToRefs } from "pinia";
 
-    // Stores
+    // Use the main store
     const mainStore = useMainStore();
+    // Import the theme-state from the main store and destructure it into a ref
     const { theme } = storeToRefs(mainStore);
 
     // Create the interface of the props
