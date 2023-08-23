@@ -10,11 +10,15 @@ module.exports = {
         fluidTypography: {},
         colors: {
             transparent: "transparent",
-            green: {
-                100: "#37F286",
-                200: "#23CE6B",
-                300: "#1E944F",
-                400: "#187A42",
+            purple: {
+                100: "#CFC2FB",
+                200: "#CDAEFB",
+            },
+            blue: {
+                100: "#82A9F9",
+            },
+            turquoise: {
+                100: "#A4FCF4",
             },
             dark: {
                 100: "#181B1F",
