@@ -1,6 +1,8 @@
 <template>
     <!-- Dark mode particles -->
-    <particles
+    <!-- Light mode particles -->
+    <!--
+     <particles
         v-if="theme === 'dark'"
         :particlesInit="particlesInit"
         :options="particlesTSDarkModeConfig"
@@ -8,8 +10,7 @@
         id="tsparticles"
         class="animate-fade-in fixed left-0 top-0 min-h-screen w-full"
     />
-    <!-- Light mode particles -->
-    <particles
+     <particles
         v-else
         :particlesInit="particlesInit"
         :options="particlesTSLightModeConfig"
@@ -17,6 +18,10 @@
         id="tsparticles"
         class="animate-fade-in absolute left-0 top-0 h-screen w-full"
     />
+    -->
+
+    <!-- 3D Tres Canvas -->
+    <hero-canvas />
 
     <div class="text-white-100 relative mt-16 flex h-[calc(100vh_-_8rem)] w-full flex-col items-start justify-start sm:mt-0 sm:justify-center">
         <!-- Use unique "hero" headings here instead of headings-component-->
