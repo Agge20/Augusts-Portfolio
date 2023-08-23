@@ -1,7 +1,7 @@
 <template>
     <li
         :class="theme === 'light' ? 'text-dark-200' : 'text-white'"
-        class="hover:animate-gradient-shine font-gs-semibold mx-4 lg:mx-6 cursor-pointer text-2xl lg:text-3xl opacity-0 last-of-type:mr-12 hover:bg-gradient-to-r hover:from-green-100 hover:via-green-400 hover:to-green-100 hover:bg-clip-text hover:text-transparent"
+        class="hover:animate-gradient-shine font-gs-semibold hover:via-turquoise-100 mx-4 cursor-pointer text-2xl opacity-0 last-of-type:mr-12 hover:bg-gradient-to-r hover:from-blue-100 hover:to-purple-200 hover:bg-clip-text hover:text-transparent lg:mx-6 lg:text-3xl"
     >
         <a :href="`#${link.scrollToId}`"> {{ link.text }} </a>
     </li>
@@ -11,7 +11,7 @@
     // Import types
     import { NavigationLink } from "@/types/NavigationTypes";
 
-     // Store imports
+    // Store imports
     import { useMainStore } from "~/stores/MainStore";
     import { storeToRefs } from "pinia";
 

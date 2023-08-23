@@ -2,14 +2,14 @@
     <h1 v-if="size === HeadingSize.H1" class="font-gs-bold fluid-9xl" :class="mainStore.theme === 'light' ? 'text-dark-200' : 'text-white'">
         <span
             v-if="highlightAlignment === 'start'"
-            class="animate-gradient-shine bg-gradient-to-r from-green-300 via-green-100 to-green-300 bg-clip-text text-transparent transition"
+            class="animate-gradient-shine via-turquoise-100 bg-gradient-to-r from-purple-200 to-purple-100 bg-clip-text text-transparent transition"
         >
             {{ highlightText }}
         </span>
         {{ headingText }}
         <span
             v-if="highlightAlignment === 'end'"
-            class="animate-gradient-shine bg-gradient-to-r from-green-300 via-green-100 to-green-300 bg-clip-text text-transparent transition"
+            class="animate-gradient-shine via-turquoise-100 bg-gradient-to-r from-purple-200 to-purple-100 bg-clip-text text-transparent transition"
         >
             {{ highlightText }}
         </span>
@@ -17,14 +17,14 @@
     <h2 v-if="size === HeadingSize.H2" class="font-gs-bold fluid-4xl" :class="mainStore.theme === 'light' ? 'text-dark-200' : 'text-white'">
         <span
             v-if="highlightAlignment === 'start'"
-            class="animate-gradient-shine bg-gradient-to-r from-green-300 via-green-100 to-green-300 bg-clip-text text-transparent transition"
+            class="animate-gradient-shine via-turquoise-100 bg-gradient-to-r from-purple-200 to-purple-100 bg-clip-text text-transparent transition"
         >
             {{ highlightText }}
         </span>
         {{ headingText }}
         <span
             v-if="highlightAlignment === 'end'"
-            class="animate-gradient-shine bg-gradient-to-r from-green-300 via-green-100 to-green-300 bg-clip-text text-transparent transition"
+            class="animate-gradient-shine via-turquoise-100 bg-gradient-to-r from-purple-200 to-purple-100 bg-clip-text text-transparent transition"
         >
             {{ highlightText }}
         </span>
@@ -51,6 +51,5 @@
         highlightAlignment: HighlightAlignment;
     }
 
-  
     defineProps<Props>();
 </script>
