@@ -9,7 +9,7 @@
         </div>
         <div
             @click="(showCardTitle = true), (showCardText = false)"
-            class="relative h-full w-full -translate-y-[95%] rounded-xl bg-gradient-to-r from-green-100 via-green-200 to-green-300"
+            class="relative h-full w-full -translate-y-[95%] rounded-xl bg-gradient-to-r from-purple-100 via-purple-200 to-blue-100"
         >
             <h3>Movies</h3>
             <p>Lorem ispum dolor maximums dolor maxos</p>
