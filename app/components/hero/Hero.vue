@@ -1,67 +1,35 @@
 <template>
-    <!-- Dark mode particles -->
-    <particles
-        v-if="theme === 'dark'"
-        :particlesInit="particlesInit"
-        :options="particlesTSDarkModeConfig"
-        :class="particlesHasBeenAnimated ? 'opacity-100' : 'opacity-0'"
-        id="tsparticles"
-        class="animate-fade-in fixed left-0 top-0 min-h-screen w-full"
-    />
-    <!-- Light mode particles -->
-    <particles
-        v-else
-        :particlesInit="particlesInit"
-        :options="particlesTSLightModeConfig"
-        :class="particlesHasBeenAnimated ? 'opacity-100' : 'opacity-0'"
-        id="tsparticles"
-        class="animate-fade-in absolute left-0 top-0 h-screen w-full"
-    />
-
-    <div class="text-white-100 relative mt-16 flex h-[calc(100vh_-_8rem)] w-full flex-col items-start justify-start sm:mt-0 sm:justify-center">
-        <!-- Use unique "hero" headings here instead of headings-component-->
-        <hero-header-one id="hello" class="translate-x-[20px]" />
-        <hero-header-two id="my-name-is" />
-        <!-- Skills wrapper -->
-        <div class="mt-4 flex min-h-[112px] flex-row items-center">
-            <hero-header-three id="build-with" />
-            <div id="skills">
-                <!-- Loop out all the documents -->
-                <hero-skills />
-            </div>
+  <div class="h-[calc(100vh_-_8rem)] w-full flex flex-row-reverse items-start">
+    <hero-canvas :scale-up="heroIsVisible ? true : false" />
+    <div ref="hero" class="text-white-100 relative mt-16 flex h-full w-2/3 flex-col items-start justify-start sm:mt-0 sm:justify-center">
+      <!-- Use unique "hero" headings here instead of headings-component-->
+      <hero-header-one id="hello" class="translate-x-[20px]" />
+      <hero-header-two id="my-name-is" />
+      <!-- Skills wrapper -->
+      <div class="mt-4 flex min-h-[112px] flex-row items-center">
+        <hero-header-three id="build-with" />
+        <div id="skills">
+          <!-- Loop out all the documents -->
+          <hero-skills />
         </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-    // Import particleTS config
-    import { particlesTSLightModeConfig } from "~/config/particlesTSLightMode";
-    import { particlesTSDarkModeConfig } from "~/config/particlesTSDarkMode";
-    import Particles from "@/node_modules/vue3-particles/src/components/Particles.vue";
-
-    import { loadFull } from "tsparticles";
-
-    // Store imports
-    import { useMainStore } from "~/stores/MainStore";
-    import { storeToRefs } from "pinia";
-
     // Motion one
     import { timeline } from "motion";
 
     // Motion One types
     import { TimelineSegment } from "@motionone/dom/types/timeline/types";
 
-    const particlesInit = async (engine: any) => {
-        await loadFull(engine);
-    };
-
-    // Stores
-    const mainStore = useMainStore();
-    // Import the theme-state from the main store and destructure it into a ref
-    const { theme } = storeToRefs(mainStore);
-
     // Component state
     const particlesHasBeenAnimated = ref<boolean>(false);
+
+    import { useElementVisibility } from '@vueuse/core'
+    const hero = ref()
+    const heroIsVisible = useElementVisibility(hero)
 
     // When component is mounted play animation
     onMounted(() => {
