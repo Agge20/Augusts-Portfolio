@@ -1334,25 +1334,17 @@
     lodash.merge "^4.6.2"
     postcss-selector-parser "6.0.10"
 
-"@tresjs/cientos@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@tresjs/cientos/-/cientos-3.1.0.tgz#4383334768d45848c58731c77fcc03f3f020f7c6"
-  integrity sha512-7IkEN4NR+QAsY0niC75B2K/OFDXh35j4d7D1WGJeVEHI+m8wbb2uw/zTzJVsFQrEyF/1WQ0jhq5bwKLRt2+hBQ==
+"@tresjs/cientos@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@tresjs/cientos/-/cientos-3.2.0.tgz#6060f3fb8b3be187452e9b17a6ca1a6360815044"
+  integrity sha512-oivKNu2YqAMJ5MS4bh9XffxnN26hvbiMbC38Hb2n7Nd6FlxuZ3ksKSuKGqg5b/wCGap255EZx7+gEvwCVcWT8A==
   dependencies:
-    "@tresjs/core" "3.0.1"
-    "@vueuse/core" "^10.2.1"
-    camera-controls "^2.7.0"
-    three-stdlib "^2.23.13"
+    "@tresjs/core" "3.1.0"
+    "@vueuse/core" "^10.3.0"
+    camera-controls "^2.7.1"
+    three-stdlib "^2.25.0"
 
-"@tresjs/core@3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@tresjs/core/-/core-3.0.1.tgz#26c120c0683d1fdac8ecd670efeb3b60eab9c355"
-  integrity sha512-bhLOXqDXCT527dFwdyvUpq7H+WpOgJrmJTFK3tCxrULv996+rIgS0Nz6QRLsFAuyVJwqg29FPD0H/MYEjrviSQ==
-  dependencies:
-    "@alvarosabu/utils" "^3.1.1"
-    "@vueuse/core" "^10.2.1"
-
-"@tresjs/core@^3.0.1":
+"@tresjs/core@3.1.0", "@tresjs/core@^3.0.1":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@tresjs/core/-/core-3.1.0.tgz#07ff48add6e9d991e4d9754d11e02e0ed6b94674"
   integrity sha512-mRiBJYjD5voM+g5LqwIFOFj7WJiUsm5RVkN4AiEkifuEN5CCh+pSgBJQkk2lepuC7dUIfWJZz3xy5xG3I6szzg==
@@ -1360,7 +1352,15 @@
     "@alvarosabu/utils" "^3.1.1"
     "@vueuse/core" "^10.3.0"
 
-"@tresjs/nuxt@^1.1.3":
+"@tresjs/core@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@tresjs/core/-/core-3.1.1.tgz#83ae4216bf357493f38420858bd20d0b6046060f"
+  integrity sha512-HkB65AqofpQ9wtOV0wV9tqy9gokmk4Z/46mV7ksr1eyraTd1OG0XQzejQ/uvPXlBz84K1us6YOGTGSzBwA0wlw==
+  dependencies:
+    "@alvarosabu/utils" "^3.1.1"
+    "@vueuse/core" "^10.3.0"
+
+"@tresjs/nuxt@^1.0.0":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@tresjs/nuxt/-/nuxt-1.1.3.tgz#1e2d5c3be49de6ccc1aac28c8519b0615f0ba487"
   integrity sha512-SBxfrjbYx8ASqm4PCy9Xm/t3if2uA+2k1sNFbFEWZw1rKR7xvKRzaLMoeq/HyNrWrYV1XE/0aHv7VsS3FYMGEQ==
@@ -1699,7 +1699,7 @@
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.3.4.tgz#06e83c5027f464eef861c329be81454bc8b70780"
   integrity sha512-7OjdcV8vQ74eiz1TZLzZP4JwqM5fA94K6yntPS5Z25r9HDuGNzaGdgvwKYq6S+MxwF0TFRwe50fIR/MYnakdkQ==
 
-"@vueuse/core@10.3.0", "@vueuse/core@^10.2.1", "@vueuse/core@^10.3.0":
+"@vueuse/core@10.3.0", "@vueuse/core@^10.3.0":
   version "10.3.0"
   resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-10.3.0.tgz#b2dab7821ef206811b925fc935163c38056fd82b"
   integrity sha512-BEM5yxcFKb5btFjTSAFjTu5jmwoW66fyV9uJIP4wUXXU8aR5Hl44gndaaXp7dC5HSObmgbnR2RN+Un1p68Mf5Q==
@@ -2128,7 +2128,7 @@ camelcase@^6.3.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-6.3.0.tgz#5685b95eb209ac9c0c177467778c9c84df58ba9a"
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
-camera-controls@^2.7.0:
+camera-controls@^2.7.1:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/camera-controls/-/camera-controls-2.7.1.tgz#7b2e86390d0f8b6622d17295cf7ce539cc3a7dbe"
   integrity sha512-xkXpMRp8h7FDSXtN3W0/1CQ9q6jN4B3Use2YmzVpL7ERIqU7yfiXWWZhvQAk9FrOAp7So9vNs9hvP2lAYCZ64A==
@@ -6491,10 +6491,10 @@ thenify-all@^1.0.0:
   dependencies:
     any-promise "^1.0.0"
 
-three-stdlib@^2.23.13:
-  version "2.24.2"
-  resolved "https://registry.yarnpkg.com/three-stdlib/-/three-stdlib-2.24.2.tgz#5973998e908819b04c16f435ace9410092c92a12"
-  integrity sha512-+FWg+evDvjcuwIYopqEz6xCrqadSW6j855EV4/5w/kygwEc2BktB7s4Y8iZEQKGq8g6Srfj5eWQpSK0+51C4Hg==
+three-stdlib@^2.25.0:
+  version "2.25.0"
+  resolved "https://registry.yarnpkg.com/three-stdlib/-/three-stdlib-2.25.0.tgz#ea9492fa02f4cde61ae0c9c7faf266d95081247e"
+  integrity sha512-E1zW4szHzRsQqiYWzDwBDn7xkeoZEUeIrzyI//AClSi9t7m6BIcN1dWTUATVoNw9Z5d8FhGHCfwgo4tFJ2T8+Q==
   dependencies:
     "@types/draco3d" "^1.4.0"
     "@types/offscreencanvas" "^2019.6.4"

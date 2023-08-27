@@ -119,6 +119,7 @@ module.exports = {
                 "gradient-shine": "gradient-shine 2.5s linear infinite",
                 "expand-in": "expand-in 1.5s ease-in-out",
                 "fade-in": "fade-in 1.5s ease-in-out",
+                "fade-out": "fade-out 1.5s ease-in-out",
                 "slide-in-from-right": "slide-in-from-right 0.5s ease-in-out",
                 "slide-in-from-left": "slide-in-from-left 0.5s ease-in-out",
                 "card-text-slide-in": "card-text-slide-in 0.75s ease-in-out forwards",
@@ -149,6 +150,10 @@ module.exports = {
                 "fade-in": {
                     "0%": { opacity: 0 },
                     "100%": { opacity: 1 },
+                },
+                "fade-out": {
+                    "0%": { opacity: 1 },
+                    "100%": { opacity: 0 },
                 },
                 "slide-in-from-right": {
                     "0%": {
