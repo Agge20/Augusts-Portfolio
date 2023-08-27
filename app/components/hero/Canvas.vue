@@ -3,7 +3,7 @@
     <TresCanvas alpha power-preference="high-performance">
       <TresPerspectiveCamera  :position="[-10, 0, -20]" :look-at="[0, 4, -2]" />
         <Suspense>
-            <primitive ref="modelRef" :object="model" :rotation="[0, 45, 0]" :scale="modelScale" />
+            <primitive ref="modelRef" :object="model" :rotation="[-90, -260, 0]" :scale="modelScale" />
         </Suspense>
     </TresCanvas>
   </div>
@@ -66,7 +66,7 @@
     onLoop(({ delta, elapsed, clock }) => {
        if (modelRef.value) {
          // Adjust the wave frequency
-        const waveFrequency = 2.25;
+        const waveFrequency = 4;
          // Adjust the wave amplitude
         const waveAmplitude = 0.15;
 
@@ -76,7 +76,7 @@
         // Set the object's rotation around the Z-axis to create the wave effect
         modelRef.value.rotation.z = waveAngle;
 
-        modelRef.value.rotation.x = Math.sin(elapsed * 0.85) * 0.1;
+        modelRef.value.rotation.x = Math.sin(elapsed * 0.5) * 0.1;
     }
     });
 </script>
