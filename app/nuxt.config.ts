@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@pinia/nuxt", "@nuxt/content"],
+    modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@pinia/nuxt", "@nuxt/content", "@vueuse/nuxt", "@tresjs/nuxt"],
     tailwindcss: {
         configPath: "~/config/tailwind.js",
     },

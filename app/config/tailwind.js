@@ -10,11 +10,15 @@ module.exports = {
         fluidTypography: {},
         colors: {
             transparent: "transparent",
-            green: {
-                100: "#37F286",
-                200: "#23CE6B",
-                300: "#1E944F",
-                400: "#187A42",
+            purple: {
+                100: "#CFC2FB",
+                200: "#CDAEFB",
+            },
+            blue: {
+                100: "#82A9F9",
+            },
+            turquoise: {
+                100: "#A4FCF4",
             },
             dark: {
                 100: "#181B1F",
@@ -80,9 +84,33 @@ module.exports = {
                 "11/12": "91.666667%",
                 full: "100%",
                 screen: "100vw",
+                xl: "36rem",
+                "2xl": "42rem",
+                "3xl": "48rem",
+                "4xl": "56rem",
+                "5xl": "64rem",
+                "6xl": "72rem",
             },
             minHeight: {
+                auto: "auto",
+                2: "0.5rem",
+                4: "1rem",
+                6: "1.5rem",
+                8: "2rem",
+                10: "2.5rem",
+                12: "3rem",
+                16: "4rem",
+                20: "5rem",
+                24: "6rem",
+                32: "8rem",
+                40: "10rem",
+                48: "12rem",
+                56: "14rem",
+                64: "16rem",
                 "3/4-screen": "75vh",
+                "1/2-screen": "50vh",
+                "1/4-screen": "25vh",
+                "1/5-screen": "20vh",
             },
             maxWidth: {
                 "1/2": "50%",
@@ -91,7 +119,11 @@ module.exports = {
                 "gradient-shine": "gradient-shine 2.5s linear infinite",
                 "expand-in": "expand-in 1.5s ease-in-out",
                 "fade-in": "fade-in 1.5s ease-in-out",
+                "fade-out": "fade-out 1.5s ease-in-out",
                 "slide-in-from-right": "slide-in-from-right 0.5s ease-in-out",
+                "slide-in-from-left": "slide-in-from-left 0.5s ease-in-out",
+                "card-text-slide-in": "card-text-slide-in 0.75s ease-in-out forwards",
+                "card-title-slide-in": "card-title-slide-in 0.75s ease-in-out forwards",
             },
             animationFill: {
                 forwards: "forwards",
@@ -119,9 +151,31 @@ module.exports = {
                     "0%": { opacity: 0 },
                     "100%": { opacity: 1 },
                 },
+                "fade-out": {
+                    "0%": { opacity: 1 },
+                    "100%": { opacity: 0 },
+                },
                 "slide-in-from-right": {
                     "0%": {
                         transform: "translateX(100%)",
+                        opacity: 0,
+                    },
+                    "75%": {
+                        transform: "translateX(50%)",
+                        opacity: 0,
+                    },
+                    "100%": {
+                        transform: "translateX(0)",
+                        opacity: 1,
+                    },
+                },
+                "slide-in-from-left": {
+                    "0%": {
+                        transform: "translateX(-100%)",
+                        opacity: 0,
+                    },
+                    "75%": {
+                        transform: "translateX(-50%)",
                         opacity: 0,
                     },
                     "100%": {

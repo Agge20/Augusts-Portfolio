@@ -1,9 +1,9 @@
 <template>
     <h3
         :class="theme === 'light' ? 'text-dark-200' : 'text-white'"
-        class="font-gs-semibold lg:fluid-3xl mr-4 mt-2 text-3xl opacity-0 transition sm:mt-0"
+        class="font-gs-semibold lg:fluid-3xl mr-2 w-auto text-3xl opacity-0 transition lg:mr-4"
     >
-        I build stuff with:
+        I build stuff on the browser with:
     </h3>
 </template>
 
@@ -12,7 +12,8 @@
     import { useMainStore } from "~/stores/MainStore";
     import { storeToRefs } from "pinia";
 
-    // Stores
+    // Use the main store
     const mainStore = useMainStore();
+    // Import the theme-state from the main store and destructure it into a ref
     const { theme } = storeToRefs(mainStore);
 </script>
