@@ -1,34 +1,18 @@
 <template>
-    <h1 v-if="size === HeadingSize.H1" class="font-gs-bold fluid-9xl" :class="mainStore.theme === 'light' ? 'text-dark-200' : 'text-white'">
+    <component :is="size" :class="[defaultClasses, sizeClasses, mainStore.theme === 'light' ? 'text-dark-200' : 'text-white']">
         <span
             v-if="highlightAlignment === 'start'"
             class="animate-gradient-shine via-turquoise-100 bg-gradient-to-r from-purple-200 to-purple-100 bg-clip-text text-transparent transition"
         >
             {{ highlightText }}
         </span>
-        {{ headingText }}
         <span
             v-if="highlightAlignment === 'end'"
             class="animate-gradient-shine via-turquoise-100 bg-gradient-to-r from-purple-200 to-purple-100 bg-clip-text text-transparent transition"
         >
             {{ highlightText }}
         </span>
-    </h1>
-    <h2 v-if="size === HeadingSize.H2" class="font-gs-bold fluid-4xl" :class="mainStore.theme === 'light' ? 'text-dark-200' : 'text-white'">
-        <span
-            v-if="highlightAlignment === 'start'"
-            class="animate-gradient-shine via-turquoise-100 bg-gradient-to-r from-purple-200 to-purple-100 bg-clip-text text-transparent transition"
-        >
-            {{ highlightText }}
-        </span>
-        {{ headingText }}
-        <span
-            v-if="highlightAlignment === 'end'"
-            class="animate-gradient-shine via-turquoise-100 bg-gradient-to-r from-purple-200 to-purple-100 bg-clip-text text-transparent transition"
-        >
-            {{ highlightText }}
-        </span>
-    </h2>
+    </component>
 </template>
 
 <script setup lang="ts">
@@ -42,7 +26,7 @@
     import { HeadingSize } from "@/types/HeadingTypes";
 
     // Import the allowed highlight alignments
-    import { HighlightAlignment } from "@/types/HighlightAlignmentTypes";
+    import type { HighlightAlignment } from "@/types/HighlightAlignmentTypes";
 
     interface Props {
         size: HeadingSize;
@@ -51,5 +35,26 @@
         highlightAlignment: HighlightAlignment;
     }
 
-    defineProps<Props>();
+    const props = defineProps<Props>();
+
+    // Default classes
+    const defaultClasses = ["text-ch-black-200", "font-ws-regular"];
+
+    const sizeClasses = ref<string>("");
+
+    // Based on the size prop, set the sizeClasses ref value
+    switch (props.size) {
+        case HeadingSize.H1:
+            sizeClasses.value = "text-4xl";
+            break;
+        case HeadingSize.H2:
+            sizeClasses.value = "font-gs-bold fluid-4xl";
+            break;
+        case HeadingSize.H3:
+            sizeClasses.value = "text-xl";
+            break;
+        case HeadingSize.H4:
+            sizeClasses.value = "text-md opacity-75";
+            break;
+    }
 </script>
