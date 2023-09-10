@@ -6,19 +6,6 @@
 </template>
 
 <script setup lang="ts">
-    // Store imports
-    import { useMainStore } from "~/stores/MainStore";
-
-    // Use the main store
-    const mainStore = useMainStore();
-
-    // Import the allowed heading sizes
-    import { HeadingSize } from "@/types/HeadingTypes";
-
-    // Import the allowed highlight alignments
-    import { HighlightAlignment } from "@/types/HighlightAlignmentTypes";
-
-    // Interface for the prop data
     interface Props {
         headingText: String;
         highlightText: String;
@@ -26,4 +13,14 @@
         text: String;
     }
     defineProps<Props>();
+
+    /* Types */
+    import type { HighlightAlignment } from "@/types/HighlightAlignmentTypes";
+    import { HeadingSize } from "@/types/HeadingTypes";
+
+    /* Store imports */
+    import { useMainStore } from "~/stores/MainStore";
+
+    // Use the main store
+    const mainStore = useMainStore();
 </script>

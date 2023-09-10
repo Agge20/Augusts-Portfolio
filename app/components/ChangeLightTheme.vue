@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-    // Store imports
+    /* Store imports */
     import { useMainStore } from "~/stores/MainStore";
 
     // Use the main store

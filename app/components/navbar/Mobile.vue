@@ -7,19 +7,18 @@
 </template>
 
 <script setup lang="ts">
-    // Import the allowed navigation types
-    import { NavigationLink as NavigationLinkType } from "@/types/NavigationTypes";
-
-    // Create the interface of the props
     interface NavbarMobileProps {
         links: NavigationLinkType[];
     }
 
-    // Motion one
-    import { timeline } from "motion";
+    defineProps<NavbarMobileProps>();
 
-    // Motion One types
+    /* Types */
+    import { NavigationLink as NavigationLinkType } from "@/types/NavigationTypes";
     import { TimelineSegment } from "@motionone/dom/types/timeline/types";
+
+    /* Motion one imports */
+    import { timeline } from "motion";
 
     // When component is mounted
     onMounted(() => {
@@ -42,6 +41,4 @@
         const sequence: TimelineSegment[] = [...navigationLinksTimeline];
         timeline(sequence, { duration: 1 });
     });
-
-    defineProps<NavbarMobileProps>();
 </script>

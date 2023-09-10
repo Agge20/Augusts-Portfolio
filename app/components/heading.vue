@@ -16,18 +16,6 @@
 </template>
 
 <script setup lang="ts">
-    // Store imports
-    import { useMainStore } from "~/stores/MainStore";
-
-    // Use the main store
-    const mainStore = useMainStore();
-
-    // Import the allowed heading sizes
-    import { HeadingSize } from "@/types/HeadingTypes";
-
-    // Import the allowed highlight alignments
-    import type { HighlightAlignment } from "@/types/HighlightAlignmentTypes";
-
     interface Props {
         size: HeadingSize;
         headingText: String;
@@ -37,9 +25,22 @@
 
     const props = defineProps<Props>();
 
-    // Default classes
+    /* Types */
+    import { HeadingSize } from "@/types/HeadingTypes";
+    import type { HighlightAlignment } from "@/types/HighlightAlignmentTypes";
+
+    /* Store imports */
+    import { useMainStore } from "~/stores/MainStore";
+
+    /* Use the main store */
+    const mainStore = useMainStore();
+
+    /* Non-reactive state */
+
+    // Default classes for the heading
     const defaultClasses = ["text-ch-black-200", "font-ws-regular"];
 
+    /* Reactive state */
     const sizeClasses = ref<string>("");
 
     // Based on the size prop, set the sizeClasses ref value

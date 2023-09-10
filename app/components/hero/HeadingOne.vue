@@ -1,14 +1,9 @@
 <template>
-    <h1
-        :class="[theme === 'light' ? 'text-dark-200' : 'text-white']"
-        class="font-gs-semibold lg:fluid-3xl mb-2 text-3xl opacity-0 transition sm:mb-0"
-    >
-        Hello.
-    </h1>
+    <h1 :class="[theme === 'light' ? 'text-dark-200' : 'text-white']" class="font-gs-bold sm:fluid-6xl mb-8 text-7xl opacity-0 transition">Hello.</h1>
 </template>
 
 <script setup lang="ts">
-    // Store imports
+    /* Store imports */
     import { useMainStore } from "~/stores/MainStore";
     import { storeToRefs } from "pinia";
 

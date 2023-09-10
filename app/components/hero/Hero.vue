@@ -1,35 +1,25 @@
 <template>
-  <div class="h-[calc(100vh_-_8rem)] w-full flex flex-row-reverse items-start">
-    <hero-canvas :scale-up="heroIsVisible ? true : false" />
-    <div ref="hero" class="text-white-100 relative mt-16 flex h-full w-2/3 flex-col items-start justify-start sm:mt-0 sm:justify-center">
-      <!-- Use unique "hero" headings here instead of headings-component-->
-      <hero-header-one id="hello" class="translate-x-[20px]" />
-      <hero-header-two id="my-name-is" />
-      <!-- Skills wrapper -->
-      <div class="mt-4 flex min-h-[112px] flex-row items-center">
-        <hero-header-three id="build-with" />
-        <div id="skills">
-          <!-- Loop out all the documents -->
-          <hero-skills />
+    <div ref="hero" class="flex h-full min-h-[calc(100vh_-_8rem)] w-full flex-col pt-16 sm:flex-row">
+        <div class="text-white-100 relative mt-16 flex h-full flex-col items-start justify-start sm:mt-0 lg:w-3/5">
+            <hero-heading-one id="hello" class="translate-x-[20px]" />
+            <hero-heading-two id="my-name-is" />
+            <!-- Skills wrapper -->
+            <div class="flex flex-row items-center sm:mt-4">
+                <hero-heading-three id="build-with" />
+                <!-- Loop out all the documents -->
+                <hero-skills />
+            </div>
         </div>
-      </div>
+        <hero-canvas />
     </div>
-  </div>
 </template>
 
 <script setup lang="ts">
-    // Motion one
+    /* Motion one imports */
     import { timeline } from "motion";
 
-    // Motion One types
+    /* Types */
     import { TimelineSegment } from "@motionone/dom/types/timeline/types";
-
-    // Component state
-    const particlesHasBeenAnimated = ref<boolean>(false);
-
-    import { useElementVisibility } from '@vueuse/core'
-    const hero = ref()
-    const heroIsVisible = useElementVisibility(hero)
 
     // When component is mounted play animation
     onMounted(() => {
@@ -69,7 +59,5 @@
 
         // Create timeline
         timeline(heroTextSequence, { delay: 1.25, direction: "normal" });
-
-        particlesHasBeenAnimated.value = true;
     });
 </script>

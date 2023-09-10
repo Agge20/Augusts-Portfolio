@@ -6,19 +6,16 @@
 </template>
 
 <script setup lang="ts">
-    // Vue imports
+    /* Vue imports */
     import { onUpdated } from "vue";
 
-    // Import the Skill type
-    import { Skill } from "~/types/Skill";
-    // Fetch all the skills content data
-    // @†s-ignore
-    const { data: skillsData }: { data: Skill[] } = await useAsyncData("home", () => queryContent("/json/skills").find());
-
-    // Motion One types
+    /* Types */
+    import type { Skill } from "~/types/Skill";
     import { TimelineSegment } from "@motionone/dom/types/timeline/types";
-
     import { timeline } from "motion";
+
+    // Fetch all the skills content data
+    const { data: skillsData }: { data: Skill[] } = await useAsyncData("home", () => queryContent("/json/skills").find());
 
     // When component is mounted play animation
     onUpdated(() => {

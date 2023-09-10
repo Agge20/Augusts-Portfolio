@@ -5,13 +5,12 @@
 </template>
 
 <script setup lang="ts">
-    // Import types
-    import { NavigationLink } from "@/types/NavigationTypes";
-
-    // Create the interface of the props
     interface NavigationLinkProps {
         link: NavigationLink;
     }
 
     defineProps<NavigationLinkProps>();
+
+    /* Types */
+    import { NavigationLink } from "@/types/NavigationTypes";
 </script>

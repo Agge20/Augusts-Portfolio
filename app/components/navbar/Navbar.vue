@@ -16,27 +16,24 @@
 </template>
 
 <script lang="ts" setup>
-    // Import the allowed navigation types
+    /* Types */
     import { NavigationLinks, NavigationText } from "@/types/NavigationTypes";
-
-    // Load motion one
-    import { timeline } from "motion";
-
-    // Import types
     import { TimelineSegment } from "@motionone/dom/types/timeline/types";
 
-    // Store imports
+    /* Motion one imports */
+    import { timeline } from "motion";
+
+    /* Store imports */
     import { useMainStore } from "~/stores/MainStore";
     import { storeToRefs } from "pinia";
 
     // Use the main store
     const mainStore = useMainStore();
-     // Import the theme-state from the main store and destructure it into a ref
+    // Import the theme-state from the main store and destructure it into a ref
     const { theme } = storeToRefs(mainStore);
 
-    // State
+    // Reactive state
     const openNavbarMobile = ref<boolean>(false);
-
     const hamburgerColor = ref<string>("text-white");
 
     // Create a ref to the navigation links
@@ -59,7 +56,6 @@
         },
     ]);
 
-    // When component is mounted
     onMounted(() => {
         const navigationLinks: NodeListOf<HTMLLIElement> = document.querySelectorAll("#navbar li");
         const navigationLinksLength: number = navigationLinks.length;
