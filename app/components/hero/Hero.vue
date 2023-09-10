@@ -1,5 +1,5 @@
 <template>
-    <div ref="hero" class="flex h-full min-h-[calc(100vh_-_8rem)] w-full flex-col pt-16 sm:flex-row">
+    <div ref="hero" class="flex h-full min-h-[calc(100vh_-_8rem)] w-full flex-col items-center pt-16 sm:flex-row">
         <div class="text-white-100 relative mt-16 flex h-full flex-col items-start justify-start sm:mt-0 lg:w-3/5">
             <hero-heading-one id="hello" class="translate-x-[20px]" />
             <hero-heading-two id="my-name-is" />

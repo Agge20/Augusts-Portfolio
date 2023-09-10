@@ -1,5 +1,5 @@
 <template>
-    <div class="animate-scale-in relative right-0 hidden w-1/2 lg:right-0 lg:inline-block lg:w-2/5">
+    <div class="animate-scale-in relative right-0 hidden min-h-[510px] w-1/2 lg:right-0 lg:inline-block lg:w-2/5">
         <TresCanvas alpha power-preference="high-performance">
             <TresPerspectiveCamera :position="[-11, 0, -20]" :look-at="[0, 0, 0]" />
             <Suspense>

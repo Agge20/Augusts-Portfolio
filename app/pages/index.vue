@@ -2,7 +2,7 @@
     <spinner v-if="!themeHasBeenLoaded" />
     <main v-if="themeHasBeenLoaded" :class="theme === 'light' ? 'bg-white' : 'bg-dark-100'" class="min-h-screen overflow-x-hidden pb-64 transition">
         <!-- Center content -->
-        <div class="max-w-screen-3xl mx-auto px-4 md:px-8 lg:px-12 xl:px-16">
+        <div class="mx-auto max-w-screen-2xl px-4 md:px-8 lg:px-12 xl:px-16">
             <navbar />
             <hero />
             <change-light-theme />
@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-    // Import the main store
+    /* Store imports  */
     import { useMainStore } from "~/stores/MainStore";
     import { storeToRefs } from "pinia";
 
@@ -48,8 +48,10 @@
     // Fetch the about me text json-data
     const { data: aboutMeTextData } = await useFetch('/api/_content/query?_params={"where":{"_path":"/json/text/about-me"}}');
 
+    /* VueUse imports */
     import { useElementVisibility } from "@vueuse/core";
 
+    /* Reactive state */
     const aboutMe = ref(null);
     const aboutMeIsVisible = useElementVisibility(aboutMe);
     const myMainInterests = ref(null);
