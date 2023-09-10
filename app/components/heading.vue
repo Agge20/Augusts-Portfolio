@@ -1,16 +1,20 @@
 <template>
     <component :is="size" :class="[defaultClasses, sizeClasses, mainStore.theme === 'light' ? 'text-dark-200' : 'text-white']">
-        <span
-            v-if="highlightAlignment === 'start'"
-            class="animate-gradient-shine via-turquoise-100 bg-gradient-to-r from-purple-200 to-purple-100 bg-clip-text text-transparent transition"
-        >
-            {{ highlightText }}
+        <span v-if="highlightAlignment === 'start'" class="">
+            <span
+                class="animate-gradient-shine via-turquoise-100 bg-gradient-to-r from-purple-200 to-purple-100 bg-clip-text text-transparent transition"
+            >
+                {{ highlightText }}
+            </span>
+            {{ headingText }}
         </span>
-        <span
-            v-if="highlightAlignment === 'end'"
-            class="animate-gradient-shine via-turquoise-100 bg-gradient-to-r from-purple-200 to-purple-100 bg-clip-text text-transparent transition"
-        >
-            {{ highlightText }}
+        <span v-if="highlightAlignment === 'end'">
+            {{ headingText }}
+            <span
+                class="animate-gradient-shine via-turquoise-100 bg-gradient-to-r from-purple-200 to-purple-100 bg-clip-text text-transparent transition"
+            >
+                {{ highlightText }}
+            </span>
         </span>
     </component>
 </template>
