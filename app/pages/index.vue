@@ -1,9 +1,9 @@
 <template>
     <spinner v-if="!themeHasBeenLoaded" />
     <main v-if="themeHasBeenLoaded" :class="theme === 'light' ? 'bg-white' : 'bg-dark-100'" class="min-h-screen overflow-x-hidden pb-64 transition">
+        <navbar />
         <!-- Center content -->
         <div class="mx-auto max-w-screen-2xl px-4 md:px-8 lg:px-12 xl:px-16">
-            <navbar />
             <hero />
             <change-light-theme />
         </div>

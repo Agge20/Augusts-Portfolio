@@ -1,5 +1,5 @@
 <template>
-    <header id="header" class="relative z-20 flex h-32 w-full">
+    <header id="header" class="relative z-20 mx-auto flex h-32 w-full max-w-screen-2xl px-4 md:px-8 lg:px-12 xl:px-16">
         <div class="center flex w-full justify-end">
             <!-- Navigation links -->
             <ul id="navbar" class="hidden items-center md:flex">
