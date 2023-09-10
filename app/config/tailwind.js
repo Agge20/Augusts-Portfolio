@@ -122,6 +122,7 @@ module.exports = {
                 "fade-out": "fade-out 1.5s ease-in-out",
                 "slide-in-from-right": "slide-in-from-right 0.5s ease-in-out",
                 "slide-in-from-left": "slide-in-from-left 0.5s ease-in-out",
+                "scale-in": "scale-in 1s ease-in-out forwards",
                 "card-text-slide-in": "card-text-slide-in 0.75s ease-in-out forwards",
                 "card-title-slide-in": "card-title-slide-in 0.75s ease-in-out forwards",
             },
@@ -181,6 +182,14 @@ module.exports = {
                     "100%": {
                         transform: "translateX(0)",
                         opacity: 1,
+                    },
+                },
+                "scale-in": {
+                    "0%": {
+                        transform: "scale(0)",
+                    },
+                    "100%": {
+                        transform: "scale(1)",
                     },
                 },
             },

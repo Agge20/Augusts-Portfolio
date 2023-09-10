@@ -8,22 +8,22 @@
 </template>
 
 <script setup lang="ts">
-    // Import types
-    import { NavigationLink } from "@/types/NavigationTypes";
-
-    // Store imports
-    import { useMainStore } from "~/stores/MainStore";
-    import { storeToRefs } from "pinia";
-
-    // Use the main store
-    const mainStore = useMainStore();
-    // Import the theme-state from the main store and destructure it into a ref
-    const { theme } = storeToRefs(mainStore);
-
     // Create the interface of the props
     interface NavigationLinkProps {
         link: NavigationLink;
     }
 
     defineProps<NavigationLinkProps>();
+
+    /* Store imports */
+    import { useMainStore } from "~/stores/MainStore";
+    import { storeToRefs } from "pinia";
+
+    /* Types */
+    import { NavigationLink } from "@/types/NavigationTypes";
+
+    // Use the main store
+    const mainStore = useMainStore();
+    // Import the theme-state from the main store and destructure it into a ref
+    const { theme } = storeToRefs(mainStore);
 </script>

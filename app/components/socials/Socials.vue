@@ -18,10 +18,10 @@
 </template>
 
 <script setup lang="ts">
-    // Import types
+    /* Types */
     import { socialUrls } from "@/types/SocialUrls";
 
-    // Store imports
+    /* Store imports */
     import { useMainStore } from "~/stores/MainStore";
     import { storeToRefs } from "pinia";
 
