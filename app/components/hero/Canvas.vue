@@ -2,7 +2,7 @@
     <div class="animate-scale-in relative right-0 hidden w-1/2 lg:right-0 lg:inline-block lg:w-2/5">
         <TresCanvas alpha power-preference="high-performance">
             <TresPerspectiveCamera :position="[-11, 0, -20]" :look-at="[0, 0, 0]" />
-            <OrbitControls />
+            <OrbitControls :enable-zoom="false" />
             <Suspense>
                 <primitive ref="modelRef" :position="[0, modelScaleYPosition]" :object="model" :rotation="[-90, -260, 0]" :scale="modelScale" />
             </Suspense>
