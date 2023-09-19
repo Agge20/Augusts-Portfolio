@@ -49,11 +49,9 @@
         if (window.innerWidth < 1280) {
             modelScale.value = 0.75;
             modelScaleYPosition.value = 3;
-            console.log("if ran...");
         } else {
             modelScale.value = 1.1;
             modelScaleYPosition.value = -2;
-            console.log("else ran...");
         }
     };
 
