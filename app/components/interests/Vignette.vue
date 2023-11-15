@@ -1,10 +1,11 @@
 <template>
-  <h3 class="text-white font-gs-semibold text-4xl">{{ text }}</h3>
+  <span class="text-base text-white font-gs-medium">{{ text }}</span>
 </template>
 
 <script setup lang="ts">
 interface Props {
   text: string;
 }
+
 defineProps<Props>();
 </script>
