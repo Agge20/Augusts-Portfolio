@@ -1,99 +1,31 @@
 <template>
-  <div class="relative h-80 w-80 cursor-pointer">
-    <div ref="showCardTextRef" @click="toggleCard"
-      class="relative z-20 h-full w-full rounded-xl bg-white shadow-2xl transition hover:scale-105">
-      <interests-card-heading :text="'Movies'" />
+  <div class="group relative w-1/3 min-h-88 p-4 bg-blue-100 rounded-xl bg-cover bg-center transition hover:scale-105 "
+    :style="`background-image: url(${imagePath})`">
+    <div class="bg-dark-200 absolute top-0 left-0 w-full h-full opacity-25"></div>
+    <div class="relative z-10 transition-opacity  group-hover:opacity-0">
+      <interests-vignette :text="'Interest'" />
+      <interests-card-heading :text="title" />
     </div>
-    <div @click="toggleCard"
-      class="relative h-full w-full -translate-y-[95%] rounded-xl bg-gradient-to-r from-purple-100 via-purple-200 to-blue-100">
-      <h3>{{ title }}</h3>
-      <p>Lorem ispum dolor maximums dolor maxos</p>
-    </div>
+    <p class="relative z-10 text-white opacity-0 transition-opacity group-hover:opacity-100">Prow scuttle parrel provost
+      Sail ho
+      shrouds
+      spirits
+      boom mizzenmast
+      yardarm.
+      Pinnace holystone mizzenmast quarter
+      crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog
+      black jack gangway rutters.</p>
   </div>
 </template>
 
 <script setup lang="ts">
 interface Props {
   title: string;
-  image_path: string;
+  imagePath: string;
 }
 
-defineProps<Props>();
+const props = defineProps<Props>();
 
-const showCardText = ref<boolean>(false);
-const showCardTextRef = ref<HTMLElement | null>(null);
-const toggleCardAnimationComplete = ref<boolean>(true);
+console.log(props.title);
 
-// Motion one
-import { timeline } from "motion";
-
-// Motion One types
-import { TimelineSegment } from "@motionone/dom/types/timeline/types";
-
-/**
- * Toggles the animation to show/hide card text.
- *
- * This function animates the card text's appearance and disappearance using a timeline sequence.
- * It sets the animation state to `toggleCardAnimationComplete` to prevent simultaneous animations.
- *
- * @remarks
- * The animation consists of three segments:
- * 1. Slide the card text in and rotate it slightly.
- * 2. Adjust the z-index to control visibility.
- * 3. Slide the card text out and reset its rotation.
- */
-const toggleCard = () => {
-  if (toggleCardAnimationComplete.value) {
-    toggleCardAnimationComplete.value = false;
-
-    showCardText.value = !showCardText.value;
-    // Generate either true of false
-    const randomBoolean = Math.random() < 0.5;
-
-    // Timeline sequence for the show text card animation
-    const showCardTextSequence: TimelineSegment[] = [
-      [
-        // @ts-ignore
-        showCardTextRef.value,
-        {
-          y: ["-5%", "125%"],
-          rotateZ: [0, randomBoolean ? 10 : -10],
-        },
-        {
-          duration: 0.35,
-        },
-      ],
-
-      [
-        // @ts-ignore
-        showCardTextRef.value,
-        {
-          zIndex: showCardText.value ? 0 : 1,
-        },
-        {
-          duration: 0.15,
-        },
-      ],
-
-      [
-        // @ts-ignore
-        showCardTextRef.value,
-        {
-          y: ["100%", 0],
-          rotateZ: 0,
-        },
-        {
-          duration: 0.35,
-        },
-      ],
-    ];
-
-    // Create timeline
-    timeline(showCardTextSequence, { direction: "normal" });
-
-    setTimeout(() => {
-      toggleCardAnimationComplete.value = true;
-    }, 1500);
-  }
-};
 </script>
