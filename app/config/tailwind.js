@@ -16,9 +16,11 @@ module.exports = {
             },
             blue: {
                 100: "#82A9F9",
+                "100-trans-25": "rgba(130, 169, 249, 0.25)",
             },
             turquoise: {
                 100: "#A4FCF4",
+                "100-trans-25": "rgba(164, 252, 244, 0.25)",
             },
             dark: {
                 100: "#181B1F",
@@ -117,14 +119,17 @@ module.exports = {
             },
             animation: {
                 "gradient-shine": "gradient-shine 2.5s linear infinite",
+                "gradient-shine-and-scale": "gradient-shine-and-scale 6s linear infinite",
                 "expand-in": "expand-in 1.5s ease-in-out",
                 "fade-in": "fade-in 1.5s ease-in-out",
                 "fade-out": "fade-out 1.5s ease-in-out",
                 "slide-in-from-right": "slide-in-from-right 0.5s ease-in-out",
                 "slide-in-from-left": "slide-in-from-left 0.5s ease-in-out",
+                "slide-in-from-left-slow": "slide-in-from-left 1s ease-in-out",
                 "scale-in": "scale-in 1s ease-in-out forwards",
                 "card-text-slide-in": "card-text-slide-in 0.75s ease-in-out forwards",
                 "card-title-slide-in": "card-title-slide-in 0.75s ease-in-out forwards",
+                spin: "spin 1.5s linear infinite",
             },
             animationFill: {
                 forwards: "forwards",
@@ -138,6 +143,21 @@ module.exports = {
                     "100%": {
                         "background-size": "200% 200%",
                         "background-position": "0% center",
+                    },
+                },
+                "gradient-shine-and-scale": {
+                    "0%": {
+                        "background-size": "200% 200%",
+                        "background-position": "200% center",
+                        transform: "scale(0.9)",
+                    },
+                    "50%": {
+                        transform: "scale(1.02)",
+                    },
+                    "100%": {
+                        "background-size": "200% 200%",
+                        "background-position": "0% center",
+                        transform: "scale(0.9)",
                     },
                 },
                 "expand-in": {
@@ -172,7 +192,7 @@ module.exports = {
                 },
                 "slide-in-from-left": {
                     "0%": {
-                        transform: "translateX(-100%)",
+                        transform: "translateX(-200%)",
                         opacity: 0,
                     },
                     "75%": {
@@ -192,6 +212,17 @@ module.exports = {
                         transform: "scale(1)",
                     },
                 },
+                spin: {
+                    "0%": {
+                        transform: "rotate(0deg)",
+                    },
+                    "100%": {
+                        transform: "rotate(360deg)",
+                    },
+                },
+            },
+            boxShadow: {
+                "inset-white": "inset 0 0 2000px rgba(255, 255, 255, .5)",
             },
         },
     },
