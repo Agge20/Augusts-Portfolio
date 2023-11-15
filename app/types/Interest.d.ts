@@ -1,4 +1,4 @@
-export interface MainInterest {
+export interface Interest {
     title: string;
     image_path: string;
 }
