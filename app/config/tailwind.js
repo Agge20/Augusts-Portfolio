@@ -120,6 +120,8 @@ module.exports = {
             },
             maxWidth: {
                 "1/2": "50%",
+                "1/3": "33.333333%",
+                "2/3": "66.666667%",
             },
             animation: {
                 "gradient-shine": "gradient-shine 2.5s linear infinite",
