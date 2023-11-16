@@ -8,8 +8,8 @@
       class="bg-dark-200 absolute top-0 left-0 w-full h-full  transition-opacity"></div>
     <!-- Vignette and heading -->
     <div :class="{ 'opacity-0': showText }" class="relative flex flex-col items-start z-10 transition-opacity">
-      <interests-vignette :text="'Interest'" />
-      <interests-card-heading :text="interest.title" />
+      <InterestsCardVignette :text="'Interest'" />
+      <InterestsCardHeading :text="interest.title" />
     </div>
     <!-- Text -->
     <p :class="{ 'opacity-100': showText }" class="relative z-10 text-white opacity-0 transition-opacity text-left">

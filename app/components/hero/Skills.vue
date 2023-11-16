@@ -1,24 +1,28 @@
 <template>
   <div id="skills" class="flex">
     <!-- Loop out all the documents -->
-    <hero-skill v-for="(skill, index) in skillsData" :key="index" class="skill" :skill="skill" />
+    <HeroSkill v-for="(skill, index) in skills" :key="index" class="skill" :skill="skill" />
   </div>
 </template>
 
 <script setup lang="ts">
-/* Vue imports */
-import { onUpdated } from "vue";
-
 /* Types */
-import type { Skill } from "~/types/Skill";
 import { TimelineSegment } from "@motionone/dom/types/timeline/types";
 import { timeline } from "motion";
 
-// Fetch all the skills content data
-const { data: skillsData }: { data: Skill[] } = await useAsyncData("skills", () => queryContent("json", "skills").find());
+/* Store imports */
+import { useMainStore } from "~/stores/MainStore";
+import { storeToRefs } from "pinia";
+
+// Use the main store
+const mainStore = useMainStore();
+
+// Import the theme-state from the main store and destructure it into a ref
+const { skills } = storeToRefs(mainStore);
 
 // When component is mounted play animation
-onUpdated(() => {
+onMounted(() => {
+
   // Get all the skills from the DOM
   const skills: NodeListOf<Element> | null = document.querySelectorAll(".skill");
 
@@ -27,7 +31,18 @@ onUpdated(() => {
 
   // Start animating the skills after 5000ms
   setTimeout(() => {
-    // Function to animate a skill
+
+    /**
+ * Animates a skill element in the `skillsArray`.
+ *
+ * This function takes an index as an argument, retrieves the corresponding skill from the `skillsArray`,
+ * and applies a sequence of animations to it. It first hides all skills, then reveals the selected skill
+ * and applies a sequence of transformations (opacity, scale, rotation) over time.
+ *
+ * After the animation sequence is completed, it schedules the next skill to be animated after a delay of 3000ms.
+ *
+ * @param index - The index of the skill in the `skillsArray` to animate.
+ */
     const animateSkill = (index: number) => {
       if (!skillsArray) return;
       const skill = skillsArray[index] as HTMLDivElement;
@@ -69,7 +84,6 @@ onUpdated(() => {
         ],
       ];
 
-      // Create timeline
       timeline(skillSequence, { direction: "normal" });
 
       // Increment index or reset to 0

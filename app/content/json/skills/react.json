@@ -1,5 +1,5 @@
 {
     "title": "React",
-    "image_alt": "React logo",
-    "image_path": "/svg/skills/react.svg"
+    "imageAlt": "React logo",
+    "imagePath": "/svg/skills/react.svg"
 }

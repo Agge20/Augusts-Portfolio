@@ -1,5 +1,5 @@
 {
     "title": "MongoDB",
-    "image_alt": "MongoDB logo",
-    "image_path": "/svg/skills/mongodb.svg"
+    "imageAlt": "MongoDB logo",
+    "imagePath": "/svg/skills/mongodb.svg"
 }

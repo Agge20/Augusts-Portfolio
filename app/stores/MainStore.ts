@@ -1,12 +1,18 @@
 import { defineStore } from "pinia";
 
+/* Types */
+import type { Skill } from "~/types/Skill";
+
 export const useMainStore = defineStore("mainStore", {
     state: () => {
         // Define what color theme should be used
         const theme = ref<"dark" | "light">("light");
+        // Holds all the skills from the skills content directory
+        const skills = ref<Skill[]>([]);
 
         return {
             theme,
+            skills
         };
     },
     actions: {

@@ -1,16 +1,16 @@
 <template>
     <div ref="hero" class="flex h-full min-h-[calc(100vh_-_8rem)] w-full flex-col items-center pt-16 sm:flex-row">
         <div class="text-white-100 relative mt-16 flex h-full flex-col items-start justify-start sm:mt-0 lg:w-3/5">
-            <hero-heading-one id="hello" class="translate-x-[20px]" />
-            <hero-heading-two id="my-name-is" />
+            <HeroHeadingOne id="hello" class="translate-x-[20px]" />
+            <HeroHeadingTwo id="my-name-is" />
             <!-- Skills wrapper -->
             <div class="flex flex-row items-center sm:mt-4">
-                <hero-heading-three id="build-with" />
+                <HeroHeadingThree id="build-with" />
                 <!-- Loop out all the documents -->
-                <hero-skills />
+                <HeroSkills />
             </div>
         </div>
-        <hero-canvas />
+        <HeroCanvas />
     </div>
 </template>
 

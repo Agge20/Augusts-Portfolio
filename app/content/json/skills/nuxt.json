@@ -1,5 +1,5 @@
 {
     "title": "Nuxt 3",
-    "image_alt": "Nuxt 3 logo",
-    "image_path": "/svg/skills/nuxt.svg"
+    "imageAlt": "Nuxt 3 logo",
+    "imagePath": "/svg/skills/nuxt.svg"
 }
