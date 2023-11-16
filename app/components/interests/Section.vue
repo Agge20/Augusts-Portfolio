@@ -1,7 +1,7 @@
 <template>
   <article class="mb-24 max-w-4xl">
     <heading :size="HeadingSize.H2" :headingText="'My main'" :highlightText="'interests'" :highlightAlignment="'end'" />
-    <div class="mt-8 flex gap-x-8">
+    <div class="mt-8 flex flex-col gap-8 lg:flex-row">
       <interests-card v-for="(interest, index) in  interestsData" :key="index" :title="interest.title"
         :imagePath="interest.image_path" />
     </div>
