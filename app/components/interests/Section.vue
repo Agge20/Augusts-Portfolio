@@ -32,10 +32,8 @@ const { data } = await useAsyncData("interests", async () => {
   }));
 });
 
-
 watchEffect(() => {
   // Watch for changes in the `data` object
   interestsData.value = data.value ?? [];
 })
-
 </script>
