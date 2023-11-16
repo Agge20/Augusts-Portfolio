@@ -1,4 +1,5 @@
 export interface Interest {
     title: string;
-    image_path: string;
+    text: string;
+    imagePath: string;
 }

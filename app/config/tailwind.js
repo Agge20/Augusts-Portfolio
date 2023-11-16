@@ -123,6 +123,13 @@ module.exports = {
                 "1/3": "33.333333%",
                 "2/3": "66.666667%",
             },
+            opacity: {
+                15: "0.15",
+                10: "0.1",
+            },
+            scale: {
+                102: "1.02",
+            },
             animation: {
                 "gradient-shine": "gradient-shine 2.5s linear infinite",
                 "gradient-shine-and-scale": "gradient-shine-and-scale 6s linear infinite",
