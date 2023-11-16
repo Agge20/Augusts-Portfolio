@@ -8,7 +8,7 @@
       <hero />
       <change-light-theme />
     </div>
-    <div class="relative z-20 mx-auto max-w-screen-2xl px-4 md:px-8 lg:px-12 xl:px-16">
+    <div class="relative z-20 mt-8 mx-auto max-w-screen-2xl px-4 md:px-8 lg:px-12 xl:px-16">
       <!-- About me text section -->
       <text-and-heading v-if="aboutMeTextData" ref="aboutMe" v-element-visibility="onAboutMeVisibility"
         :headingText="aboutMeTextData.heading_text" :highlightText="aboutMeTextData.highlight_text"
@@ -17,7 +17,7 @@
         class="mb-24" />
       <!-- Main interests section -->
       <interests-section ref="myInterests" v-element-visibility="onMyInterestsVisibility"
-        :class="{ 'animate-fade-in mt-16 opacity-100 transition': myInterestsIsVisible, 'opacity-0': !myInterestsIsVisible }" />
+        :class="{ 'animate-fade-in opacity-100 transition': myInterestsIsVisible, 'opacity-0': !myInterestsIsVisible }" />
 
       <!-- Contact section -->
       <text-and-heading :headingText="'Want to'" :highlightText="'contact me?'" :highlightAlignment="'end'"
@@ -60,17 +60,16 @@ aboutMeTextData.value = rawAboutMeTextData.value[0];
 const aboutMe = ref(null);
 const myInterests = ref(null);
 
-const isVisible = ref(false)
+const aboutMeIsVisible = ref<boolean>(false);
+const myInterestsIsVisible = ref<boolean>(false);
 
-const aboutMeIsVisible = ref(false);
-const myInterestsIsVisible = ref(false);
-
-function onAboutMeVisibility(state) {
+function onAboutMeVisibility(state: boolean): void {
   aboutMeIsVisible.value = state
 }
 
-function onMyInterestsVisibility(state) {
+function onMyInterestsVisibility(state: boolean): void {
   myInterestsIsVisible.value = state
 }
+
 
 </script>
