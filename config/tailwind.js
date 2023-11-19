@@ -12,7 +12,9 @@ module.exports = {
             transparent: "transparent",
             purple: {
                 100: "#CFC2FB",
+                "100-trans-50": "rgba(207, 194, 251, 0.5)",
                 200: "#CDAEFB",
+                "200-trans-50": "rgba(205, 174, 251, 0.5)",
             },
             blue: {
                 100: "#82A9F9",
@@ -24,9 +26,12 @@ module.exports = {
             },
             dark: {
                 100: "#181B1F",
+                "100-trans-50": "rgba(24, 27, 31, 0.5)",
                 200: "#0F0F0F",
+                "200-trans-50": "rgba(15, 15, 15, 0.5)",
             },
             white: "#FFFFFF",
+            "white-trans-50": "rgba(255, 255, 255, 0.5)",
             "linkedin-blue": "#0077B5",
         },
         extend: {

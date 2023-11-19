@@ -1,7 +1,9 @@
 <template>
-  <li :class="theme === 'light' ? 'text-dark-200' : 'text-white'"
-    class="hover:animate-gradient-shine font-gs-semibold hover:via-turquoise-100 mx-4 cursor-pointer text-2xl opacity-0 last-of-type:mr-12 hover:bg-gradient-to-r hover:from-blue-100 hover:to-purple-200 hover:bg-clip-text hover:text-transparent lg:mx-6 lg:text-3xl">
-    <a @click="useScrollToElement(link.scrollToId)"> {{ link.text }} </a>
+  <li
+    class="text-white font-gs-semibold hover:via-turquoise-100 mx-2 cursor-pointer text-xl opacity-0 first:ml-0 hover:bg-gradient-to-r hover:from-blue-100 hover:to-purple-200 hover:bg-clip-text hover:text-transparent hover:animate-gradient-shine xl:mx-4 xl:text-xl">
+    <button :aria-label="`Go to the ${link.text.toLowerCase()} section`" @click="useScrollToElement(link.scrollToId)"> {{
+      link.text }}
+    </button>
   </li>
 </template>
 

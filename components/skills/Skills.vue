@@ -1,5 +1,5 @@
 <template>
-  <div class="spacing-b max-w-4xl text-white">
+  <div class="pt-content max-w-4xl text-white">
     <heading :size="HeadingSize.H2" :headingText="'Current'" :highlightText="'techstack'" :highlightAlignment="'end'" />
     <div class="grid gap-5 grid-cols-2 sm:grid-cols-3 sm:gap-8 lg:grid-cols-5">
       <div v-for="skill in skills" class="flex flex-col items-center p-4 bg-dark-200 rounded-2xl">

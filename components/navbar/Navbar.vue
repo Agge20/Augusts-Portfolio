@@ -1,8 +1,9 @@
 <template>
-  <header id="header" class="relative z-50 mx-auto flex h-32 w-full max-w-screen-2xl px-4 md:px-8 lg:px-12 xl:px-16">
-    <div class="center flex w-full justify-end">
+  <header id="header" class="fixed top-4 z-50 mx-auto flex w-full px-4 md:px-8 lg:px-12 xl:px-16">
+    <nav
+      class="center flex w-auto justify-center rounded-full md:bg-dark-200-trans-50 md:backdrop-blur-md md:backdrop-saturate-100 md:shadow-lg">
       <!-- Navigation links -->
-      <ul id="navbar" class="hidden items-center md:flex">
+      <ul id="navbar" class="hidden items-center pl-8 pr-4 md:flex">
         <NavbarLink v-for="link in navigationLinks" :key="link.scrollToId" :link="link" />
       </ul>
       <Socials />
@@ -12,8 +13,8 @@
         <span v-for="index in 3" :key="index" class="inline-block h-[3px] w-8 rounded-full"
           :class="hamburgerColor"></span>
       </div>
-      <NavbarMobile v-if="openNavbarMobile" :links="navigationLinks" @close-navbar-mobile="test()" />
-    </div>
+      <NavbarMobile v-if="openNavbarMobile" :links="navigationLinks" />
+    </nav>
   </header>
 </template>
 
@@ -36,6 +37,7 @@ const { theme, openNavbarMobile } = storeToRefs(mainStore);
 
 // Reactive state
 const hamburgerColor = ref<string>("text-white");
+const userHasScrolled = ref<boolean>(false);
 
 // Create a ref to the navigation links
 const navigationLinks = ref<NavigationLinks>([
@@ -139,7 +141,5 @@ onMounted(() => {
   });
 });
 
-const test = () => {
-  console.log("test");
-};
+
 </script>

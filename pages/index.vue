@@ -1,7 +1,7 @@
 <template>
   <a href="#main" aria-label="Go to main content"></a>
   <Spinner v-if="!themeHasBeenLoaded" />
-  <div v-if="themeHasBeenLoaded" :class="theme === 'light' ? 'bg-white' : 'bg-dark-100'"
+  <div v-if="themeHasBeenLoaded" :class="theme === 'light' ? 'bg-white' : 'bg-gradient-to-br from-dark-100 to-dark-200'"
     class="min-h-screen overflow-x-hidden pb-64 transition">
     <navbar />
     <main id="main">
@@ -15,7 +15,7 @@
         <TextAndHeading v-if="aboutMeTextData" id="about-me" ref="aboutMe" v-element-visibility="onAboutMeVisibility"
           :headingText="aboutMeTextData.heading_text" :highlightText="aboutMeTextData.highlight_text"
           :highlightAlignment="'start'" :text="aboutMeTextData.text"
-          :class="{ 'animate-fade-in mt-16 opacity-100 transition': aboutMeIsVisible, 'opacity-0': !aboutMeIsVisible }" />
+          :class="{ 'animate-fade-in opacity-100 transition': aboutMeIsVisible, 'opacity-0': !aboutMeIsVisible }" />
         <!-- Main interests section -->
         <Interests id="interests" ref="myInterests" v-element-visibility="onInterestsVisibility"
           :class="{ 'animate-fade-in opacity-100 transition': interestsIsVisible, 'opacity-0': !interestsIsVisible }" />
