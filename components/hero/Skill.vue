@@ -14,7 +14,7 @@ interface Props {
 defineProps<Props>();
 
 /* Types */
-import type { Skill } from "~/types/Skill";
+import type { Skill } from "~/types/interfaces/Skill";
 /* Store imports */
 import { useMainStore } from "~/stores/MainStore";
 import { storeToRefs } from "pinia";

@@ -12,5 +12,5 @@ interface NavigationLinkProps {
 defineProps<NavigationLinkProps>();
 
 /* Types */
-import { NavigationLink } from "@/types/NavigationTypes";
+import { NavigationLink } from "@/types/enums/NavigationTypes";
 </script>

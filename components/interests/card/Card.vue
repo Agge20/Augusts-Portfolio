@@ -19,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Interest } from "@/types/Interest";
+import type { Interest } from "@/types/interfaces/Interest";
 
 interface Props {
   interest: Interest;
