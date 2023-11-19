@@ -25,7 +25,7 @@ import { storeToRefs } from "pinia";
 
 // Use the main store
 const mainStore = useMainStore();
-// Import the theme-state from the main store and destructure it into a ref
+// Import the openNavbarMobile-state from the main store and destructure it into a ref
 const { openNavbarMobile } = storeToRefs(mainStore);
 
 // Define a function to handle the click event

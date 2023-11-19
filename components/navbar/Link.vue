@@ -6,7 +6,6 @@
 </template>
 
 <script setup lang="ts">
-// Create the interface of the props
 interface NavigationLinkProps {
   link: NavigationLink;
 }
