@@ -1,5 +1,5 @@
 <template>
-  <article class="spacing-b max-w-4xl">
+  <article class="pt-content max-w-4xl">
     <heading :size="HeadingSize.H2" :headingText="'My main'" :highlightText="'interests'" :highlightAlignment="'end'" />
     <div class="flex flex-col gap-8 lg:flex-row">
       <InterestsCard v-for="(interest, index) in  interestsData" :key="index" :interest="interest" />
