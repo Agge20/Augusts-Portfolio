@@ -1,5 +1,5 @@
 <template>
-  <div id="skills" class="flex">
+  <div class="flex">
     <!-- Loop out all the documents -->
     <HeroSkill v-for="(skill, index) in skills" :key="index" class="skill" :skill="skill" />
   </div>
@@ -18,7 +18,7 @@ import { storeToRefs } from "pinia";
 const mainStore = useMainStore();
 
 // Import the theme-state from the main store and destructure it into a ref
-const { skills } = storeToRefs(mainStore);
+const { skills } = mainStore;
 
 // When component is mounted play animation
 onMounted(() => {

@@ -1,5 +1,5 @@
 <template>
-  <div class="min-w-64 bg-dark-200 animate-slide-in-from-right fixed right-0 top-0 z-20 min-h-screen w-1/2 md:hidden">
+  <div class="min-w-64 bg-dark-200 animate-slide-in-from-right fixed right-0 top-0 min-h-screen w-1/2 md:hidden">
     <ul id="navbar-mobile" class="flex min-h-screen flex-col items-center justify-center">
       <NavbarMobileLink v-for="link in links" :key="link.scrollToId" :link="link" />
     </ul>
