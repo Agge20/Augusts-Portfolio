@@ -29,7 +29,7 @@ interface Props {
 const props = defineProps<Props>();
 
 /* Types */
-import { HeadingSize } from "@/types/HeadingTypes";
+import { HeadingSize } from "@/types/enums/HeadingTypes";
 import type { HighlightAlignment } from "@/types/HighlightAlignmentTypes";
 
 /* Store imports */
@@ -41,7 +41,7 @@ const mainStore = useMainStore();
 /* Non-reactive state */
 
 // Default classes for the heading
-const defaultClasses = ["text-ch-black-200", "font-ws-regular"];
+const defaultClasses = ["mb-8", "text-ch-black-200", "font-ws-regular"];
 
 /* Reactive state */
 const sizeClasses = ref<string>("");

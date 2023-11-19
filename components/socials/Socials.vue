@@ -19,7 +19,7 @@
 
 <script setup lang="ts">
     /* Types */
-    import { socialUrls } from "@/types/SocialUrls";
+    import { socialUrls } from "@/types/enums/SocialUrls";
 
     /* Store imports */
     import { useMainStore } from "~/stores/MainStore";

@@ -1,7 +1,7 @@
 <template>
-  <article class="mb-24 max-w-4xl">
+  <article class="spacing-b max-w-4xl">
     <heading :size="HeadingSize.H2" :headingText="'My main'" :highlightText="'interests'" :highlightAlignment="'end'" />
-    <div class="mt-8 flex flex-col gap-4 md:gap-8 lg:flex-row">
+    <div class="flex flex-col gap-8 lg:flex-row">
       <InterestsCard v-for="(interest, index) in  interestsData" :key="index" :interest="interest" />
     </div>
   </article>
@@ -9,8 +9,8 @@
 
 <script setup lang="ts">
 /* Types */
-import { HeadingSize } from "@/types/HeadingTypes";
-import type { Interest } from "@/types/Interest";
+import { HeadingSize } from "@/types/enums/HeadingTypes";
+import type { Interest } from "@/types/interfaces/Interest";
 
 // The fetched data is mapped to the `Interest` type.
 const interestsData = ref<Interest[]>();

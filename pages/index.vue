@@ -6,25 +6,25 @@
     <navbar />
     <main id="main">
       <!-- Center content -->
-      <div class="mx-auto max-w-screen-2xl px-4 md:px-8 lg:px-12 xl:px-16">
+      <div class="content mx-auto max-w-screen-2xl">
         <Hero />
         <ChangeLightTheme />
       </div>
-      <div class="relative z-20 mt-8 mx-auto max-w-screen-2xl px-4 md:px-8 lg:px-12 xl:px-16">
+      <div class="content relative z-20 mt-8 mx-auto max-w-screen-2xl">
         <!-- About me text section -->
         <TextAndHeading v-if="aboutMeTextData" ref="aboutMe" v-element-visibility="onAboutMeVisibility"
           :headingText="aboutMeTextData.heading_text" :highlightText="aboutMeTextData.highlight_text"
           :highlightAlignment="'start'" :text="aboutMeTextData.text"
-          :class="{ 'animate-fade-in mt-16 opacity-100 transition': aboutMeIsVisible, 'opacity-0': !aboutMeIsVisible }"
-          class="mb-24" />
+          :class="{ 'animate-fade-in mt-16 opacity-100 transition': aboutMeIsVisible, 'opacity-0': !aboutMeIsVisible }" />
         <!-- Main interests section -->
-        <Interests ref="myInterests" v-element-visibility="onMyInterestsVisibility"
-          :class="{ 'animate-fade-in opacity-100 transition': myInterestsIsVisible, 'opacity-0': !myInterestsIsVisible }" />
+        <Interests ref="myInterests" v-element-visibility="onInterestsVisibility"
+          :class="{ 'animate-fade-in opacity-100 transition': interestsIsVisible, 'opacity-0': !interestsIsVisible }" />
         <!-- Skills section -->
-        <Skills :skills="skills" />
+        <Skills v-element-visibility="onSkillsVisibility" :skills="skills"
+          :class="{ 'animate-fade-in opacity-100 transition': skillsIsVisible, 'opacity-0': !skillsIsVisible }" />
         <!-- Contact section -->
         <TextAndHeading :headingText="'Want to'" :highlightText="'contact me?'" :highlightAlignment="'end'"
-          :text="'<a>Email: augustraro112@hotmail.com</a><br><p>Phone number: +0725662442</p>'" class="mb-24" />
+          :text="'<a>Email: augustraro112@hotmail.com</a><br><p>Phone number: +0725662442</p>'" />
       </div>
     </main>
   </div>
@@ -44,8 +44,8 @@ const themeHasBeenLoaded = ref<boolean>(false);
 const aboutMeTextData = ref<AboutMeTextData | null>(null);
 
 /* Types */
-import type { AboutMeTextData } from "~/types/AboutMeTextData";
-import type { Skill } from "~/types/Skill";
+import type { AboutMeTextData } from "~/types/interfaces/AboutMeTextData";
+import type { Skill } from "~/types/interfaces/Skill";
 
 onMounted(() => {
   // Check the user theme preference
@@ -64,18 +64,22 @@ aboutMeTextData.value = rawAboutMeTextData.value[0];
 const aboutMe = ref(null);
 const myInterests = ref(null);
 
+/* Elements are visible or not */
 const aboutMeIsVisible = ref<boolean>(false);
-const myInterestsIsVisible = ref<boolean>(false);
+const interestsIsVisible = ref<boolean>(false);
+const skillsIsVisible = ref<boolean>(false);
 
 function onAboutMeVisibility(state: boolean): void {
   aboutMeIsVisible.value = state
 }
 
-function onMyInterestsVisibility(state: boolean): void {
-  myInterestsIsVisible.value = state
+function onInterestsVisibility(state: boolean): void {
+  interestsIsVisible.value = state
 }
 
-
+function onSkillsVisibility(state: boolean): void {
+  skillsIsVisible.value = state
+}
 /**
 * Fetches Nuxt Content JSON-objects from the "skills" directory.
 *
@@ -96,7 +100,6 @@ const { data: skillsData } = await useAsyncData("skills", async () => {
 watchEffect(() => {
   // When the skills data changes, update the store value that holds the skills
   if (skillsData.value) {
-    console.log("skillsData: ", skillsData.value);
     skills.value = skillsData.value ?? [];
   }
 })

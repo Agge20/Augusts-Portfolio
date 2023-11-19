@@ -18,7 +18,7 @@ import { useMainStore } from "~/stores/MainStore";
 import { storeToRefs } from "pinia";
 
 /* Types */
-import { NavigationLink } from "@/types/NavigationTypes";
+import { NavigationLink } from "@/types/enums/NavigationTypes";
 
 // Use the main store
 const mainStore = useMainStore();

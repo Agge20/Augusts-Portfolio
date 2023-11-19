@@ -13,6 +13,10 @@ html {
     }
 
     .content {
-        @apply px-4 md:px-8 lg:px-12 xl:px-16;
+        @apply px-8 lg:px-12 xl:px-16;
+    }
+
+    .spacing-b {
+        @apply mb-8 lg:mb-12 xl:mb-16;
     }
 }

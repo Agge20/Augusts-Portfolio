@@ -14,7 +14,7 @@ interface NavbarMobileProps {
 defineProps<NavbarMobileProps>();
 
 /* Types */
-import { NavigationLink as NavigationLinkType } from "@/types/NavigationTypes";
+import { NavigationLink as NavigationLinkType } from "@/types/enums/NavigationTypes";
 import { TimelineSegment } from "@motionone/dom/types/timeline/types";
 
 /* Motion one imports */

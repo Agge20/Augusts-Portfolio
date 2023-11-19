@@ -19,7 +19,7 @@
 
 <script lang="ts" setup>
 /* Types */
-import { NavigationLinks, NavigationText } from "@/types/NavigationTypes";
+import { NavigationLinks, NavigationText } from "@/types/enums/NavigationTypes";
 import { TimelineSegment } from "@motionone/dom/types/timeline/types";
 
 /* Motion one imports */
