@@ -12,18 +12,18 @@
       </div>
       <div class="content relative z-20 mt-8 mx-auto max-w-screen-2xl">
         <!-- About me text section -->
-        <TextAndHeading v-if="aboutMeTextData" ref="aboutMe" v-element-visibility="onAboutMeVisibility"
+        <TextAndHeading v-if="aboutMeTextData" id="about-me" ref="aboutMe" v-element-visibility="onAboutMeVisibility"
           :headingText="aboutMeTextData.heading_text" :highlightText="aboutMeTextData.highlight_text"
           :highlightAlignment="'start'" :text="aboutMeTextData.text"
           :class="{ 'animate-fade-in mt-16 opacity-100 transition': aboutMeIsVisible, 'opacity-0': !aboutMeIsVisible }" />
         <!-- Main interests section -->
-        <Interests ref="myInterests" v-element-visibility="onInterestsVisibility"
+        <Interests id="interests" ref="myInterests" v-element-visibility="onInterestsVisibility"
           :class="{ 'animate-fade-in opacity-100 transition': interestsIsVisible, 'opacity-0': !interestsIsVisible }" />
         <!-- Skills section -->
-        <Skills v-element-visibility="onSkillsVisibility" :skills="skills"
+        <Skills id="skills" v-element-visibility="onSkillsVisibility" :skills="skills"
           :class="{ 'animate-fade-in opacity-100 transition': skillsIsVisible, 'opacity-0': !skillsIsVisible }" />
         <!-- Contact section -->
-        <TextAndHeading :headingText="'Want to'" :highlightText="'contact me?'" :highlightAlignment="'end'"
+        <TextAndHeading id="contact" :headingText="'Want to'" :highlightText="'contact me?'" :highlightAlignment="'end'"
           :text="'<a>Email: augustraro112@hotmail.com</a><br><p>Phone number: +0725662442</p>'" />
       </div>
     </main>

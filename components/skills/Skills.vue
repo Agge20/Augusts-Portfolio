@@ -23,5 +23,5 @@ import { storeToRefs } from "pinia";
 const mainStore = useMainStore();
 
 // Import the theme-state from the main store and destructure it into a ref
-const { skills } = storeToRefs(mainStore);
+const { skills } = mainStore;
 </script>

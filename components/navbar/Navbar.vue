@@ -1,5 +1,5 @@
 <template>
-  <header id="header" class="relative z-20 mx-auto flex h-32 w-full max-w-screen-2xl px-4 md:px-8 lg:px-12 xl:px-16">
+  <header id="header" class="relative z-50 mx-auto flex h-32 w-full max-w-screen-2xl px-4 md:px-8 lg:px-12 xl:px-16">
     <div class="center flex w-full justify-end">
       <!-- Navigation links -->
       <ul id="navbar" class="hidden items-center md:flex">
@@ -12,7 +12,7 @@
         <span v-for="index in 3" :key="index" class="inline-block h-[3px] w-8 rounded-full"
           :class="hamburgerColor"></span>
       </div>
-      <NavbarMobile v-if="openNavbarMobile" :links="navigationLinks" />
+      <NavbarMobile v-if="openNavbarMobile" :links="navigationLinks" @close-navbar-mobile="test()" />
     </div>
   </header>
 </template>
@@ -32,10 +32,9 @@ import { storeToRefs } from "pinia";
 // Use the main store
 const mainStore = useMainStore();
 // Import the theme-state from the main store and destructure it into a ref
-const { theme } = storeToRefs(mainStore);
+const { theme, openNavbarMobile } = storeToRefs(mainStore);
 
 // Reactive state
-const openNavbarMobile = ref<boolean>(false);
 const hamburgerColor = ref<string>("text-white");
 
 // Create a ref to the navigation links
@@ -43,6 +42,10 @@ const navigationLinks = ref<NavigationLinks>([
   {
     text: NavigationText.AboutMe,
     scrollToId: "about-me",
+  },
+  {
+    text: NavigationText.Interests,
+    scrollToId: "interests",
   },
   {
     text: NavigationText.Skills,
@@ -135,4 +138,8 @@ onMounted(() => {
     }
   });
 });
+
+const test = () => {
+  console.log("test");
+};
 </script>

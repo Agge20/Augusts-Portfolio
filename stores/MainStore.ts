@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 
 /* Types */
-import type { Skill } from "~/types/Skill";
+import type { Skill } from "~/types/interfaces/Skill";
 
 export const useMainStore = defineStore("mainStore", {
     state: () => {
@@ -9,10 +9,13 @@ export const useMainStore = defineStore("mainStore", {
         const theme = ref<"dark" | "light">("light");
         // Holds all the skills from the skills content directory
         const skills = ref<Skill[]>([]);
+        // Controls if the mobile navigation menu is open or not
+        const openNavbarMobile = ref<boolean>(false);
 
         return {
             theme,
-            skills
+            skills,
+            openNavbarMobile,
         };
     },
     actions: {
