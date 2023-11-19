@@ -16,7 +16,6 @@ import { HeadingSize } from "@/types/enums/HeadingTypes";
 
 /* Store imports */
 import { useMainStore } from "~/stores/MainStore";
-import { storeToRefs } from "pinia";
 
 // Use the main store
 const mainStore = useMainStore();
