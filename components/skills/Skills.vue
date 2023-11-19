@@ -12,7 +12,6 @@
 
 <script setup lang="ts">
 /* Types */
-import { HighlightedContainerType } from "@/types/enums/HighlightedContainerType";
 import { HeadingSize } from "@/types/enums/HeadingTypes";
 
 /* Store imports */
