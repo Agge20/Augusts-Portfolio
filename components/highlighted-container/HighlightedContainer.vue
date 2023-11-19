@@ -11,7 +11,6 @@
 </template>
 
 <script setup lang="ts">
-
 interface Props {
   type: HighlightedContainerType;
 }
@@ -21,7 +20,7 @@ defineProps<Props>();
 import { HighlightedContainerType } from "@/types/enums/HighlightedContainerType";
 
 /* Store imports */
-import { useMainStore } from "~/stores/MainStore";
+import { useMainStore } from "~/stores/mainStore";
 import { storeToRefs } from "pinia";
 
 // Use the main store
@@ -29,4 +28,4 @@ const mainStore = useMainStore();
 
 // Import the theme-state from the main store and destructure it into a ref
 const { theme } = storeToRefs(mainStore);
-</script>
+</script>~/stores/main

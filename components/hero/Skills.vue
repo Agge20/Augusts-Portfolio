@@ -100,3 +100,4 @@ onMounted(() => {
   }, 5000);
 });
 </script>
+~/stores/main

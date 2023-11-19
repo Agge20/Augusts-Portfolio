@@ -32,7 +32,7 @@
 
 <script setup lang="ts">
 /* Store imports  */
-import { useMainStore } from "~/stores/MainStore";
+import { useMainStore } from "~/stores/mainStore";
 import { storeToRefs } from "pinia";
 
 // Use the store
@@ -104,3 +104,4 @@ watchEffect(() => {
   }
 })
 </script>
+~/stores/main

@@ -15,7 +15,7 @@ interface NavigationLinkProps {
 defineProps<NavigationLinkProps>();
 
 /* Store imports */
-import { useMainStore } from "~/stores/MainStore";
+import { useMainStore } from "~/stores/mainStore";
 import { storeToRefs } from "pinia";
 
 /* Types */
@@ -29,3 +29,4 @@ const { theme } = storeToRefs(mainStore);
 /* Composables */
 import { useScrollToElement } from "~/composables/useScrollToElement";
 </script>
+~/stores/main

@@ -5,8 +5,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue';
-
 interface NavigationLinkProps {
   link: NavigationLink;
 }
@@ -20,7 +18,7 @@ import { NavigationLink } from "@/types/enums/NavigationTypes";
 import { useScrollToElement } from "~/composables/useScrollToElement";
 
 /* Store imports */
-import { useMainStore } from "~/stores/MainStore";
+import { useMainStore } from "~/stores/mainStore";
 import { storeToRefs } from "pinia";
 
 // Use the main store
@@ -34,3 +32,4 @@ const handleClick = (id: string) => {
   openNavbarMobile.value = false;
 };
 </script>
+~/stores/main

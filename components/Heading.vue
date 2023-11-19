@@ -33,7 +33,7 @@ import { HeadingSize } from "@/types/enums/HeadingTypes";
 import type { HighlightAlignment } from "@/types/HighlightAlignmentTypes";
 
 /* Store imports */
-import { useMainStore } from "~/stores/MainStore";
+import { useMainStore } from "~/stores/mainStore";
 
 /* Use the main store */
 const mainStore = useMainStore();
@@ -62,3 +62,4 @@ switch (props.size) {
     break;
 }
 </script>
+~/stores/main

@@ -10,8 +10,9 @@
 
 <script setup lang="ts">
 /* Store imports */
-import { useMainStore } from "~/stores/MainStore";
+import { useMainStore } from "~/stores/mainStore";
 
 // Use the main store
 const mainStore = useMainStore();
 </script>
+~/stores/main

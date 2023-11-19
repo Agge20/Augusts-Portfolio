@@ -15,11 +15,11 @@
 import { HeadingSize } from "@/types/enums/HeadingTypes";
 
 /* Store imports */
-import { useMainStore } from "~/stores/MainStore";
+import { useMainStore } from "~/stores/mainStore";
 
 // Use the main store
 const mainStore = useMainStore();
 
 // Import the theme-state from the main store and destructure it into a ref
 const { skills } = mainStore;
-</script>
+</script>~/stores/main

@@ -16,10 +16,11 @@ defineProps<Props>();
 /* Types */
 import type { Skill } from "~/types/interfaces/Skill";
 /* Store imports */
-import { useMainStore } from "~/stores/MainStore";
+import { useMainStore } from "~/stores/mainStore";
 import { storeToRefs } from "pinia";
 
 // Use the main store
 const mainStore = useMainStore();
 const { theme } = storeToRefs(mainStore);
 </script>
+~/stores/main

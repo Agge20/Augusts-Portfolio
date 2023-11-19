@@ -27,7 +27,7 @@ import { TimelineSegment } from "@motionone/dom/types/timeline/types";
 import { timeline } from "motion";
 
 /* Store imports */
-import { useMainStore } from "~/stores/MainStore";
+import { useMainStore } from "~/stores/mainStore";
 import { storeToRefs } from "pinia";
 
 // Use the main store
@@ -143,3 +143,4 @@ onMounted(() => {
 
 
 </script>
+~/stores/main
