@@ -1,6 +1,6 @@
 <template>
   <h2 :class="theme === 'light' ? 'text-dark-200' : 'text-white'"
-    class="font-gs-bold sm:fluid-5xl mb-4 text-5xl opacity-0 transition sm:mb-0">
+    class="font-bold sm:fluid-5xl mb-4 text-5xl opacity-0 transition sm:mb-0">
     My name is
     <span
       class="animate-gradient-shine via-turquoise-100 bg-gradient-to-r from-purple-200 to-purple-100 bg-clip-text text-transparent transition">August</span>.

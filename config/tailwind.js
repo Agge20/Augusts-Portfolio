@@ -1,3 +1,4 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     plugins: [
@@ -29,6 +30,7 @@ module.exports = {
                 "100-trans-50": "rgba(24, 27, 31, 0.5)",
                 200: "#0F0F0F",
                 "200-trans-50": "rgba(15, 15, 15, 0.5)",
+                300: "#000000",
             },
             white: "#FFFFFF",
             "white-trans-50": "rgba(255, 255, 255, 0.5)",
@@ -40,6 +42,7 @@ module.exports = {
                 "gs-medium": ["General-Sans-Medium"],
                 "gs-semibold": ["General-Sans-Semibold"],
                 "gs-bold": ["General-Sans-Bold"],
+                sans: ["General-Sans", ...defaultTheme.fontFamily.sans],
             },
 
             minWidth: {

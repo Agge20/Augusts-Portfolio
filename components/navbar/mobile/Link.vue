@@ -1,5 +1,5 @@
 <template>
-  <li class="font-gs-semibold my-2 cursor-pointer text-2xl text-white opacity-0">
+  <li class="font-semibold my-2 cursor-pointer text-2xl text-white opacity-0">
     <a @click="handleClick(link.scrollToId)"> {{ link.text }} </a>
   </li>
 </template>

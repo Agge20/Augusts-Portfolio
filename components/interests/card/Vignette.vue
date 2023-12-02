@@ -1,5 +1,5 @@
 <template>
-  <span class="text-base text-white font-gs-medium">{{ text }}</span>
+  <span class="text-base text-white font-medium">{{ text }}</span>
 </template>
 
 <script setup lang="ts">
