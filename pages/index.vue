@@ -22,6 +22,9 @@
         <!-- Skills section -->
         <Skills id="skills" v-element-visibility="onSkillsVisibility" :skills="skills"
           :class="{ 'animate-fade-in opacity-100 transition': skillsIsVisible, 'opacity-0': !skillsIsVisible }" />
+        <!-- Portfolio section -->
+        <Portfolio id="portfolio" v-element-visibility="onPortfolioVisibility"
+          :class="{ 'animate-fade-in opacity-100 transition': portfolioIsVisible, 'opacity-0': !portfolioIsVisible }" />
         <!-- Contact section -->
         <TextAndHeading id="contact" :headingText="'Want to'" :highlightText="'contact me?'" :highlightAlignment="'end'"
           :text="'<a>Email: augustraro112@hotmail.com</a><br><p>Phone number: +0725662442</p>'" />
@@ -68,6 +71,7 @@ const myInterests = ref(null);
 const aboutMeIsVisible = ref<boolean>(false);
 const interestsIsVisible = ref<boolean>(false);
 const skillsIsVisible = ref<boolean>(false);
+const portfolioIsVisible = ref<boolean>(false);
 
 function onAboutMeVisibility(state: boolean): void {
   aboutMeIsVisible.value = state
@@ -79,6 +83,10 @@ function onInterestsVisibility(state: boolean): void {
 
 function onSkillsVisibility(state: boolean): void {
   skillsIsVisible.value = state
+}
+
+function onPortfolioVisibility(state: boolean): void {
+  portfolioIsVisible.value = state
 }
 /**
 * Fetches Nuxt Content JSON-objects from the "skills" directory.
@@ -104,4 +112,3 @@ watchEffect(() => {
   }
 })
 </script>
-~/stores/main

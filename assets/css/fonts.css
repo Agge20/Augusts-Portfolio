@@ -1,9 +1,9 @@
 @font-face {
-    font-family: "General-Sans-Regular";
+    font-family: "General-Sans";
     src: url("../../fonts/woff/GeneralSans-Regular.woff") format("woff"), url("../../fonts/woff2/GeneralSans-Regular.woff2") format("woff2"),
         url("../../fonts/ttf/GeneralSans-Regular.ttf") format("truetype"), url("../../fonts/eot/GeneralSans-Regular.eot") format("embedded-opentype");
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     text-rendering: optimizeLegibility;
     font-display: auto;
 }
@@ -13,7 +13,7 @@
     src: url("../../fonts/woff/GeneralSans-Medium.woff") format("woff"), url("../../fonts/woff2/GeneralSans-Medium.woff2") format("woff2"),
         url("../../fonts/ttf/GeneralSans-Medium.ttf") format("truetype"), url("../../fonts/eot/GeneralSans-Medium.eot") format("embedded-opentype");
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
     text-rendering: optimizeLegibility;
     font-display: auto;
 }
@@ -24,7 +24,7 @@
         url("../../fonts/ttf/GeneralSans-Semibold.ttf") format("truetype"),
         url("../../fonts/eot/GeneralSans-Semibold.eot") format("embedded-opentype");
     font-style: normal;
-    font-weight: normal;
+    font-weight: 600;
     text-rendering: optimizeLegibility;
     font-display: auto;
 }
@@ -34,7 +34,7 @@
     src: url("../../fonts/woff/GeneralSans-Bold.woff") format("woff"), url("../../fonts/woff2/GeneralSans-Bold.woff2") format("woff2"),
         url("../../fonts/ttf/GeneralSans-Bold.ttf") format("truetype"), url("../../fonts/eot/GeneralSans-Bold.eot") format("embedded-opentype");
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     text-rendering: optimizeLegibility;
     font-display: auto;
 }

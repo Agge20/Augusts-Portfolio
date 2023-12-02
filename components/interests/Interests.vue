@@ -1,6 +1,6 @@
 <template>
   <article class="pt-content max-w-4xl">
-    <heading :size="HeadingSize.H2" :headingText="'My main'" :highlightText="'interests'" :highlightAlignment="'end'" />
+    <Heading :size="'h2'" :headingText="'My main'" :highlightText="'interests'" :highlightAlignment="'end'" />
     <div class="flex flex-col gap-8 lg:flex-row">
       <InterestsCard v-for="(interest, index) in  interestsData" :key="index" :interest="interest" />
     </div>
@@ -9,7 +9,6 @@
 
 <script setup lang="ts">
 /* Types */
-import { HeadingSize } from "@/types/enums/HeadingTypes";
 import type { Interest } from "@/types/interfaces/Interest";
 
 // The fetched data is mapped to the `Interest` type.

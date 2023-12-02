@@ -20,16 +20,15 @@
 
 <script setup lang="ts">
 interface Props {
-  size: HeadingSize;
-  headingText: String;
-  highlightText: String;
+  size: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  headingText: string;
+  highlightText: string;
   highlightAlignment: HighlightAlignment;
 }
 
 const props = defineProps<Props>();
 
 /* Types */
-import { HeadingSize } from "@/types/enums/HeadingTypes";
 import type { HighlightAlignment } from "@/types/HighlightAlignmentTypes";
 
 /* Store imports */
@@ -48,18 +47,17 @@ const sizeClasses = ref<string>("");
 
 // Based on the size prop, set the sizeClasses ref value
 switch (props.size) {
-  case HeadingSize.H1:
+  case 'h1':
     sizeClasses.value = "text-4xl";
     break;
-  case HeadingSize.H2:
-    sizeClasses.value = "font-gs-bold fluid-4xl";
+  case 'h2':
+    sizeClasses.value = "font-bold fluid-4xl";
     break;
-  case HeadingSize.H3:
+  case 'h3':
     sizeClasses.value = "text-xl";
     break;
-  case HeadingSize.H4:
+  case 'h4':
     sizeClasses.value = "text-md opacity-75";
     break;
 }
 </script>
-~/stores/main

@@ -1,6 +1,6 @@
 <template>
   <li
-    class="text-white font-gs-semibold hover:via-turquoise-100 mx-2 cursor-pointer text-xl opacity-0 first:ml-0 hover:bg-gradient-to-r hover:from-blue-100 hover:to-purple-200 hover:bg-clip-text hover:text-transparent hover:animate-gradient-shine xl:mx-4 xl:text-xl">
+    class="text-white font-semibold hover:via-turquoise-100 mx-2 cursor-pointer text-xl opacity-0 first:ml-0 hover:bg-gradient-to-r hover:from-blue-100 hover:to-purple-200 hover:bg-clip-text hover:text-transparent hover:animate-gradient-shine xl:mx-4 xl:text-xl">
     <button :aria-label="`Go to the ${link.text.toLowerCase()} section`" @click="useScrollToElement(link.scrollToId)"> {{
       link.text }}
     </button>
