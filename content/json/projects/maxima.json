@@ -1,7 +1,7 @@
 {
     "url": "https://maxima.vasyd.se/",
-    "imageAlt": "Maxima VASYD website image",
-    "imagePath": "/projects/maxima.jpg",
+    "imageAlt": "Screenshot of the MAXIMA site",
+    "imagePath": "/projects/webp/maxima.webp",
     "title": "Maxima VASYD",
     "text": "I served as the lead developer for the development of the MAXIMA site in collaboration with VA SYD. My responsibilities included the setup and production of the site backend, as well as crafting a responsive and easily maintainable frontend. I achieved this by employing Drupal single-directory components and Storybook.",
     "technologies": ["Drupal 10", "Storybook", "TailwindCSS", "Twig", "JavaScript", "PHP", "Single Directory Components"]

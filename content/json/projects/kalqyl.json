@@ -1,0 +1,8 @@
+{
+    "url": "https://kalqyl.se/",
+    "imageAlt": "Screenshot of the Kalqyl.se site",
+    "imagePath": "/projects/webp/kalqyl.webp",
+    "title": "Kalqyl",
+    "text": "I have taken part in the development of the Kalqyl.se site. Creating and organizing variety of frontend components. As well as creating backend functionality for the site.",
+    "technologies": ["Drupal 10", "JavaScript", "SCSS", "BEM", "Twig", "PHP"]
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://copenhagenconsensus.com/",
+    "imageAlt": "Screenshot of the Copenhagen Consensus Center site",
+    "imagePath": "/projects/webp/copenhagen-consensus-center.webp",
+    "title": "Copenhagen Consensus Center",
+    "text": "As the main developer, I played a critical role in the production of the Copenhagen Consensus Center's newly rebranded website in 2023. My responsibilities included building the entire frontend framework and improving the code organization and buildup as well as implementing PHP pre-processing hooks to enhance data handling.",
+    "technologies": ["Drupal 9", "JavaScript", "SCSS", "BEM", "Twig", "PHP"]
+}

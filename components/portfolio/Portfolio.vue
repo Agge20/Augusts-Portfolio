@@ -1,7 +1,7 @@
 <template>
   <section class="pt-content max-w-4xl">
     <Heading :size="'h2'" :headingText="'Previous'" :highlightText="'projects'" :highlightAlignment="'end'" />
-    <div class="grid grid-cols-1 sm:grid-cols-2">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
       <PortfolioCard v-for="(project, index) in projectsData" :project="project" :key="index" />
     </div>
   </section>

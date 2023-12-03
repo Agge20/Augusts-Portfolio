@@ -1,0 +1,8 @@
+{
+    "url": "https://simplexor.com/",
+    "imageAlt": "Screenshot of the Simplexor website",
+    "imagePath": "/projects/webp/simplexor.webp",
+    "title": "Simplexor",
+    "text": "I was in charge of the organization and implementation of creating frontend for the Simplexor one-pager site built using the Vue 3 framework. During the development I was in close communcation with the client ensuring that the site was built according to their vision.",
+    "technologies": ["Vue 3", "TailwindCSS", "Netlify"]
+}
