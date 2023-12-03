@@ -1,0 +1,8 @@
+{
+    "url": "https://sandson.se",
+    "imageAlt": "Screenshot of the Sandson website",
+    "imagePath": "/projects/webp/sandson.webp",
+    "title": "Sandson",
+    "text": "I worked on enhancing the user experience by creating efficient and effective solutions for different sections of the site. I implemented improved JavaScript code. Additionally, I made various style improvements to the site, ensuring a more visually appealing and intuitive user interface.",
+    "technologies": ["Drupal 9", "JavaScript", "SCSS", "BEM"]
+}

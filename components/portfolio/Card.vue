@@ -1,25 +1,26 @@
 <template>
-  <a :href="project.url" target="_blank" class="w-full">
-    <article class="prose bg-dark-300 p-4 rounded-lg cursor-pointer transition-all hover:scale-105">
+  <a :href="project.url" target="_blank"
+    class="rounded-lg w-full cursor-pointer transition-all flex flex-col justify-between bg-dark-300 p-4 hover:scale-105">
+    <article class="prose ">
       <figure class="relative">
         <img :src="project.imagePath" :alt="project.imageAlt" class="rounded-lg">
         <figcaption
-          class="flex items-center absolute bottom-0 right-0 p-4 bg-gradient-to-tr from-turquoise-100 via-blue-100 to-purple-100 font-semibold text-dark-300 text-2xl rounded-tl-lg">
-          Visit project
-          <icon class="ml-1" name="uil:external-link-alt" size="1.1em" />
+          class="flex items-center absolute bottom-0 right-0 p-4 bg-gradient-to-tr from-turquoise-100 via-blue-100 to-purple-100 font-semibold text-dark-300 text-base sm:text-xl rounded-tl-lg">
+          Visit {{ project.title }}
+          <icon class="ml-1 min-w-6" name="uil:external-link-alt" size="1.5rem" />
         </figcaption>
       </figure>
-      <div>
-        <h3 class="text-3xl text-white  font-medium mt-[0.6em]">{{ project.title }}</h3>
-        <p class="text-white font-normal">
+      <header>
+        <h3 class="text-2xl text-white  font-medium mt-[0.6em]">{{ project.title }}</h3>
+        <p class="text-white text-sm font-normal">
           {{ project.text }}
         </p>
-        <ul class="flex flex-wrap pl-0 text-white ">
-          <li v-for="technology in project.technologies" class="mx-4 my-1 marker:text-purple-200">{{ technology }}</li>
-
-        </ul>
-      </div>
+      </header>
     </article>
+    <!-- Skills -->
+    <ul class="flex flex-wrap pl-0 text-white list-none gap-x-4 gap-y-2 border-t-2 pt-4">
+      <li v-for="technology in project.technologies" class="my-0 pl-0 text-sm">• {{ technology }}</li>
+    </ul>
   </a>
 </template>
 

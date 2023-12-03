@@ -1,0 +1,8 @@
+{
+    "url": "https://formdesigncenter.com",
+    "imageAlt": "Screenshot of the Form Design Center website",
+    "imagePath": "/projects/webp/form-design-center.webp",
+    "title": "Form Design Center",
+    "text": "As the lead frontend developer for the updated and improved version of the Form Design Center website. I focused on creating a clean and intuitive field-structure, developing reusable components, and implementing JavaScript functionality.",
+    "technologies": ["Drupal 9", "SCSS", "Figma", "Twig", "PHP", "JavaScript", "jQuery"]
+}

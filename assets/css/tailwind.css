@@ -13,7 +13,7 @@ html {
     }
 
     .content {
-        @apply px-8 lg:px-12 xl:px-16;
+        @apply px-4 lg:px-12 xl:px-16;
     }
 
     .pt-content {

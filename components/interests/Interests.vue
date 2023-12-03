@@ -1,7 +1,7 @@
 <template>
   <article class="pt-content max-w-4xl">
     <Heading :size="'h2'" :headingText="'My main'" :highlightText="'interests'" :highlightAlignment="'end'" />
-    <div class="flex flex-col gap-8 lg:flex-row">
+    <div class="flex flex-col gap-4 sm:gap-8 lg:flex-row">
       <InterestsCard v-for="(interest, index) in  interestsData" :key="index" :interest="interest" />
     </div>
   </article>
