@@ -1,11 +1,11 @@
 <template>
   <a :href="project.url" target="_blank"
-    class="rounded-lg w-full cursor-pointer transition-all flex flex-col justify-between bg-dark-300 p-4 hover:scale-105">
+    class="group rounded-lg w-full cursor-pointer transition-all flex flex-col justify-between bg-dark-300 p-4 hover:scale-105">
     <article class="prose ">
       <figure class="relative">
         <img :src="project.imagePath" :alt="project.imageAlt" class="rounded-lg">
         <figcaption
-          class="flex items-center absolute bottom-0 right-0 p-4 bg-gradient-to-tr from-turquoise-100 via-blue-100 to-purple-100 font-semibold text-dark-300 text-base sm:text-xl rounded-tl-lg">
+          class="flex items-center absolute bottom-0 right-0 p-4 bg-gradient-to-tr transition from-turquoise-100 via-blue-100 to-purple-100 font-semibold text-dark-300 text-base  rounded-tl-lg group-hover:text-white sm:text-md">
           Visit {{ project.title }}
           <icon class="ml-1 min-w-6" name="uil:external-link-alt" size="1.5rem" />
         </figcaption>
