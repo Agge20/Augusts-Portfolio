@@ -1,0 +1,8 @@
+{
+    "url": "https://040.se",
+    "imageAlt": "Image showing the 040 logo",
+    "imagePath": "/projects/webp/040.webp",
+    "title": "040",
+    "text": "I was the lead developer during the development 040 Internet AB's rebranded website for 2022. I used anime.js to animate different elements on the page. The website is built with Drupal 9 and Twig, and styled using SCSS.",
+    "technologies": ["Drupal 9", "SCSS", "Twig", "PHP", "JavaScript", "Anime.js"]
+}

@@ -1,0 +1,8 @@
+{
+    "url": "https://bruks-siwertell.com/contact",
+    "imageAlt": "Screenshot of the Bruks Siwertell Contact Solution",
+    "imagePath": "/projects/webp/bruks-siwertell.webp",
+    "title": "Bruks Siwertell Contact Solution",
+    "text": "I produced the frontend solution to the Bruks Siwertell contact page. Using conditional rendering and dynamic data management. Built with the Vue.js 3 Composition API.",
+    "technologies": ["Drupal 9", "JavaScript", "SCSS", "BEM", "Vue 3"]
+}

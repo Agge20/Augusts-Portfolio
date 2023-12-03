@@ -4,11 +4,10 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
       <PortfolioCard v-for="(project, index) in projectsData" :project="project" :key="index" />
     </div>
-
     <!-- Pagination -->
     <div class="mt-8 flex gap-x-4">
-      <PortfolioPaginationButton @click="paginationAmount -= 2" :direction="'backwards'" :text="'Go back'" />
-      <PortfolioPaginationButton @click=" paginationAmount += 2" :direction="'forward'" :text="'View more'" />
+      <PortfolioPaginationButton @click="paginationAmount -= 4" :direction="'backwards'" :text="'Go back'" />
+      <PortfolioPaginationButton @click=" paginationAmount += 4" :direction="'forward'" :text="'View more'" />
     </div>
   </section>
 </template>
@@ -32,7 +31,7 @@ const projectsData = ref<Project[]>();
 * @returns A reactive data object with the fetched JSON-data.
 */
 const { data } = await useAsyncData("projects", async () => {
-  const result = await queryContent("json", "projects").skip(paginationAmount.value).limit(2).find();
+  const result = await queryContent("json", "projects").skip(paginationAmount.value).limit(4).find();
   return result.map((item: any): Project => ({
     url: item.url,
     imageAlt: item.imageAlt,

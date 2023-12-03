@@ -1,0 +1,8 @@
+{
+    "url": "https://hollviksnas.nu",
+    "imageAlt": "Screenshot of the Höllviksnäs site",
+    "imagePath": "/projects/webp/hollviksnas.webp",
+    "title": "Höllviksnäs",
+    "text": "I was the initial lead developer responsible for the site-building and creation of frontend-components for the hollviksnas.nu website.",
+    "technologies": ["WordPress", "JavaScript", "SCSS", "BEM", "Twig", "PHP"]
+}

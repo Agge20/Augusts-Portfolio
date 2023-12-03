@@ -1,0 +1,8 @@
+{
+    "url": "https://gasslingen.com",
+    "imageAlt": "Screenshot of the Gässlingen Hotell website",
+    "imagePath": "/projects/webp/gasslingen.webp",
+    "title": "Hotell Gässlingen",
+    "text": "I was the lead Frontend Developer and responsible for the buildup and production of the gasslingen.com website.",
+    "technologies": ["WordPress", "SCSS", "Twig/Timber", "PHP", "JavaScript", "jQuery"]
+}

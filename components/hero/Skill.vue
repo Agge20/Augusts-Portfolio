@@ -2,7 +2,7 @@
   <div class="hidden flex-col justify-center text-center opacity-0 first:inline-block"
     :class="[theme === 'light' ? 'text-dark-200' : 'text-white']">
     <img class="h-16 w-16 rounded-lg sm:h-20 sm:w-20" :src="skill.imagePath" :alt="skill.imageAlt" />
-    <h4 class="font-medium text-md absolute w-full sm:text-xl">{{ skill.title }}</h4>
+    <h4 class="font-medium text-base absolute w-full">{{ skill.title }}</h4>
   </div>
 </template>
 
