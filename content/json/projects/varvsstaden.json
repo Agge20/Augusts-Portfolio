@@ -1,0 +1,8 @@
+{
+    "url": "https://www.varvsstaden.se/interaktiv-karta",
+    "imageAlt": "Screenshot of Varvsstadens websites interative map",
+    "imagePath": "/projects/webp/varvsstaden.webp",
+    "title": "Varvsstaden interactive map",
+    "text": "I was part of updating the visual behaviour of the interactive Varvsstaden city map. This was achieved by using different images that were conditionally rendered and controlled using GSAP. I also styled and improvement some responsive layouts on various parts of the website.",
+    "technologies": ["GSAP", "JavaScript", "SCSS", "Twig"]
+}
