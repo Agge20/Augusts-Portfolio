@@ -11,15 +11,15 @@
         </figcaption>
       </figure>
       <header>
-        <h3 class="text-3xl text-white  font-medium mt-[0.6em]">{{ project.title }}</h3>
-        <p class="text-white font-normal">
+        <h3 class="text-2xl text-white  font-medium mt-[0.6em]">{{ project.title }}</h3>
+        <p class="text-white text-sm font-normal">
           {{ project.text }}
         </p>
       </header>
     </article>
     <!-- Skills -->
     <ul class="flex flex-wrap pl-0 text-white list-none gap-x-4 gap-y-2 border-t-2 pt-4">
-      <li v-for="technology in project.technologies" class="my-0 pl-0 ">• {{ technology }}</li>
+      <li v-for="technology in project.technologies" class="my-0 pl-0 text-sm">• {{ technology }}</li>
     </ul>
   </a>
 </template>
