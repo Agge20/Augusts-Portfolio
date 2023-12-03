@@ -1,8 +1,8 @@
 {
     "url": "/",
     "imageAlt": "Screenshot of the August Portfolio website",
-    "imagePath": "/projects/webp/august-portfolio.webp",
-    "title": "August Portfolio",
+    "imagePath": "/projects/webp/my-portfolio.webp",
+    "title": "My own portfolio",
     "text": "This is the current site you are visiting. It is a personal portfolio website built with a modern stack. It allows me to showcase my work, experience and abilites.",
     "technologies": ["Nuxt 3", "TailwindCSS", "Three.js", "Pinia", "Nuxt content", "TypeScript"]
 }
