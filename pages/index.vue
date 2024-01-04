@@ -2,7 +2,7 @@
   <a href="#main" aria-label="Go to main content"></a>
   <Spinner v-if="!themeHasBeenLoaded" />
   <div v-if="themeHasBeenLoaded" :class="theme === 'light' ? 'bg-white' : 'bg-gradient-to-br from-dark-100 to-dark-200'"
-    class="min-h-screen overflow-x-hidden pb-64 transition">
+    class="min-h-screen overflow-x-hidden pb-64 transition ">
     <navbar />
     <main id="main">
       <!-- Center content -->
@@ -26,8 +26,7 @@
         <Portfolio id="portfolio" v-element-visibility="onPortfolioVisibility"
           :class="{ 'animate-fade-in opacity-100 transition': portfolioIsVisible, 'opacity-0': !portfolioIsVisible }" />
         <!-- Contact section -->
-        <TextAndHeading id="contact" :headingText="'Want to'" :highlightText="'contact me?'" :highlightAlignment="'end'"
-          :text="'<a>Email: augustraro112@hotmail.com</a><br><p>Phone number: +0725662442</p>'" />
+        <Contact />
       </div>
     </main>
   </div>
