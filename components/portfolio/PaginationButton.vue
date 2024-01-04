@@ -1,5 +1,5 @@
 <template>
-  <button :class="[
+  <button :aria-label="direction === 'backwards' ? 'Go back' : 'View more'" :class="[
     direction === 'backwards' ? 'flex-row-reverse' : 'flex-row',
     theme === 'light' ? 'border-dark-300 bg-white text-dark-300 hover:bg-dark-300 hover:text-white' : 'border-white bg-dark-300 text-white hover:bg-white hover:text-dark-300'
   ]" class="rounded-md w-1/2 border-2  p-4 flex justify-center transition hover:scale-105 sm:w-auto">{{
